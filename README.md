@@ -16,7 +16,7 @@ ycsts ships a single stylesheet — `dist/ycsts.css` — that provides:
 ## Install
 
 ```bash
-npm install ycsts
+npm install @yanzyu/ycsts
 ```
 
 Or use the CDN build directly in your HTML.
@@ -24,14 +24,15 @@ Or use the CDN build directly in your HTML.
 ## Link the stylesheet
 
 ```html
-<link rel="stylesheet" href="node_modules/ycsts/dist/ycsts.css">
+<link rel="stylesheet" href="node_modules/@yanzyu/ycsts/dist/ycsts.css">
 ```
 
 For the minified version:
 
 ```html
-<link rel="stylesheet" href="node_modules/ycsts/dist/ycsts.min.css">
+<link rel="stylesheet" href="node_modules/@yanzyu/ycsts/dist/ycsts.min.css">
 ```
+
 
 ## The fadein class
 
