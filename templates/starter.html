@@ -3,94 +3,302 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ycsts starter</title>
-<link rel="stylesheet" href="node_modules/ycsts/dist/ycsts.css">
+<title>ycsts - The Modern CSS Framework</title>
+<link rel="stylesheet" href="ycsts.min.css">
 </head>
-<body class="bg-gray-50 min-h-screen font-sans">
+<body class="bg-gray-50 min-h-screen font-sans text-gray-900">
 
-<header class="bg-white border-b border-gray-200 sticky top-0 z-40">
-  <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-    <span class="text-xl font-bold text-gray-900 fadein">ycsts</span>
+<header class="navbar sticky top-0 z-40 bg-white border-b border-gray-200">
+  <div class="container mx-auto px-6 py-2 flex items-center justify-between">
+    <div class="flex items-center gap-3 fadein">
+      <span class="text-2xl font-black text-blue-600 tracking-tight">ycsts</span>
+      <span class="badge badge-blue badge-pill">v1.1.0</span>
+    </div>
     <nav class="flex items-center gap-6">
-      <a href="#features" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-150">Features</a>
-      <a href="#usage" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-150">Usage</a>
-      <a href="https://github.com/yanzyuyu/ycsts-framework" class="btn btn-primary btn-sm fadein fadein-delay-1">GitHub</a>
+      <a href="#animations" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Animations</a>
+      <a href="#components" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Components</a>
+      <a href="#usage" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Usage</a>
+      <a href="https://github.com/yanzyuyu/ycsts-framework" class="btn btn-primary btn-sm btn-glow fadein fadein-delay-1">GitHub</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <section class="py-24 px-6">
-    <div class="container mx-auto text-center max-w-3xl">
+  <section class="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-blue-50 to-gray-50">
+    <div class="container mx-auto text-center max-w-4xl">
       <div class="fadein">
-        <span class="badge badge-blue mb-6">v1.0.0</span>
+        <span class="badge badge-indigo badge-pill px-4 py-1 text-sm font-semibold mb-6">Ultra-Fast &bull; Zero Config &bull; Pure CSS</span>
       </div>
-      <h1 class="text-5xl font-black text-gray-900 leading-tight tracking-tight fadein fadein-delay-1">
-        Utility-first CSS.<br>Fadein in one word.
+      <h1 class="text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight mt-4 fadein fadein-delay-1">
+        Next-Level CSS Framework.<br>
+        <span class="text-blue-600">Fadein in one word.</span>
       </h1>
-      <p class="mt-6 text-lg text-gray-600 leading-relaxed fadein fadein-delay-2">
-        ycsts is a complete CSS framework covering layout, spacing, color, typography, animation, and interactivity. Add the class <code class="font-mono text-sm bg-gray-100 px-2 py-0.5 rounded text-blue-600">fadein</code> to any element and it fades in.
+      <p class="mt-6 text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto fadein fadein-delay-2">
+        A complete modern stylesheet providing an exhaustive utility engine, rich animation suite with signature <code class="font-mono text-sm bg-blue-100 text-blue-800 px-2 py-0.5 rounded">fadein</code>, and polished production-ready components.
       </p>
-      <div class="mt-10 flex items-center justify-center gap-4 fadein fadein-delay-3">
-        <a href="#usage" class="btn btn-primary">Get started</a>
-        <a href="#features" class="btn btn-outline">See what's included</a>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4 fadein fadein-delay-3">
+        <a href="#usage" class="btn btn-primary btn-lg btn-glow">Get Started</a>
+        <a href="#animations" class="btn btn-outline btn-lg">Explore Animations</a>
       </div>
     </div>
   </section>
 
-  <section id="features" class="py-20 px-6 bg-white border-t border-gray-100">
+  <section id="stats" class="py-12 px-6 bg-white border-y border-gray-100">
+    <div class="container mx-auto max-w-5xl">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="stat-card fadein fadein-delay-1">
+          <div class="stat-title">Utility Classes</div>
+          <div class="stat-value text-blue-600">3,000+</div>
+          <div class="stat-desc">Full Tailwind-level coverage</div>
+        </div>
+        <div class="stat-card fadein fadein-delay-2">
+          <div class="stat-title">Animation Library</div>
+          <div class="stat-value text-indigo-600">25+</div>
+          <div class="stat-desc">Signature fadein suite + modern UI</div>
+        </div>
+        <div class="stat-card fadein fadein-delay-3">
+          <div class="stat-title">Components</div>
+          <div class="stat-value text-emerald-600">30+</div>
+          <div class="stat-desc">Pre-built interactive elements</div>
+        </div>
+        <div class="stat-card fadein fadein-delay-4">
+          <div class="stat-title">Setup Speed</div>
+          <div class="stat-value text-amber-600">0s</div>
+          <div class="stat-desc">Drop-in CSS or instant npx init</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="animations" class="py-20 px-6 bg-gray-50">
     <div class="container mx-auto max-w-5xl">
       <div class="section-header fadein">
-        <h2 class="section-title">What ships with ycsts</h2>
-        <p class="section-subtitle">Every utility class you need. No configuration required to start.</p>
+        <h2 class="section-title">Signature Animation Suite</h2>
+        <p class="section-subtitle">Single-word classes for instant fluid motion. No keyframe configuration needed.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
 
-        <div class="card card-body fadein fadein-delay-1">
-          <h3 class="card-title">Layout</h3>
-          <p class="card-subtitle mt-2">Flexbox, grid, container, positioning, overflow, z-index, display utilities for every layout pattern.</p>
+        <div class="card card-hover card-body fadein">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge badge-blue">fadein</span>
+            <span class="text-xs text-gray-500">Default</span>
+          </div>
+          <div class="p-6 bg-blue-50 border border-blue-100 rounded-lg text-center font-bold text-blue-700 fadein">
+            Fades in from bottom
+          </div>
+          <p class="text-xs text-gray-500 mt-4">Natural entrance with cubic-bezier smoothing.</p>
         </div>
 
-        <div class="card card-body fadein fadein-delay-2">
-          <h3 class="card-title">Spacing</h3>
-          <p class="card-subtitle mt-2">Margin and padding across all directions with a 36-step scale. m-, mx-, my-, mt-, mr-, mb-, ml-, p-, px-, py- and more.</p>
+        <div class="card card-hover card-body fadein fadein-delay-1">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge badge-indigo">fadein-scale</span>
+            <span class="text-xs text-gray-500">Scale</span>
+          </div>
+          <div class="p-6 bg-indigo-50 border border-indigo-100 rounded-lg text-center font-bold text-indigo-700 fadein-scale">
+            Scales in smoothly
+          </div>
+          <p class="text-xs text-gray-500 mt-4">Scales from 0.92 to 1.0 with opacity fade.</p>
         </div>
 
-        <div class="card card-body fadein fadein-delay-3">
-          <h3 class="card-title">Colors</h3>
-          <p class="card-subtitle mt-2">Full 22-palette, 11-shade color system. text-, bg-, border-, ring- variants for slate, gray, zinc, red, blue, green and 16 more.</p>
+        <div class="card card-hover card-body fadein fadein-delay-2">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge badge-purple">fadein-blur</span>
+            <span class="text-xs text-gray-500">Cinematic</span>
+          </div>
+          <div class="p-6 bg-purple-50 border border-purple-100 rounded-lg text-center font-bold text-purple-700 fadein-blur">
+            Cinematic blur transition
+          </div>
+          <p class="text-xs text-gray-500 mt-4">Transitions from 10px blur to crystal clarity.</p>
         </div>
 
-        <div class="card card-body fadein fadein-delay-1">
-          <h3 class="card-title">Typography</h3>
-          <p class="card-subtitle mt-2">Font size xs through 9xl, all weights, all families, line-height, letter-spacing, text-align, transforms, decoration.</p>
+        <div class="card card-hover card-body fadein fadein-delay-3">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge badge-green">fadein-left</span>
+            <span class="text-xs text-gray-500">Directional</span>
+          </div>
+          <div class="p-6 bg-green-50 border border-green-100 rounded-lg text-center font-bold text-green-700 fadein-left">
+            Slides in from right
+          </div>
+          <p class="text-xs text-gray-500 mt-4">Also supports fadein-right, fadein-up, fadein-down.</p>
         </div>
 
-        <div class="card card-body fadein fadein-delay-2">
-          <h3 class="card-title">Effects</h3>
-          <p class="card-subtitle mt-2">Shadow sm through 2xl, ring 1-8, opacity 0-100, blur, brightness, contrast, grayscale, invert, saturate filters.</p>
+        <div class="card card-hover card-body fadein fadein-delay-4">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge badge-orange">animate-float</span>
+            <span class="text-xs text-gray-500">Loop</span>
+          </div>
+          <div class="p-6 bg-orange-50 border border-orange-100 rounded-lg text-center font-bold text-orange-700 animate-float">
+            Gentle float motion
+          </div>
+          <p class="text-xs text-gray-500 mt-4">Continuous smooth 3-second floating loop.</p>
         </div>
 
-        <div class="card card-body fadein fadein-delay-3">
-          <h3 class="card-title">Animations</h3>
-          <p class="card-subtitle mt-2">Spin, ping, pulse, bounce — and the signature <code class="font-mono text-xs bg-gray-100 px-1 rounded">fadein</code> class with fast, slow, and delay variants.</p>
+        <div class="card card-hover card-body fadein fadein-delay-5">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge badge-pink">animate-pulse-glow</span>
+            <span class="text-xs text-gray-500">Ambient</span>
+          </div>
+          <div class="p-6 bg-pink-50 border border-pink-200 rounded-lg text-center font-bold text-pink-700 animate-pulse-glow">
+            Pulsing aura glow
+          </div>
+          <p class="text-xs text-gray-500 mt-4">Subtle dynamic box-shadow breathing effect.</p>
         </div>
 
-        <div class="card card-body fadein fadein-delay-1">
-          <h3 class="card-title">Responsive</h3>
-          <p class="card-subtitle mt-2">sm: md: lg: xl: 2xl: breakpoint prefixes on all utilities. Mobile-first media queries built in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="components" class="py-20 px-6 bg-white border-t border-gray-100">
+    <div class="container mx-auto max-w-5xl">
+      <div class="section-header fadein">
+        <h2 class="section-title">Component Showcase</h2>
+        <p class="section-subtitle">Crafted with precision, zero-dependency HTML elements that look stunning out of the box.</p>
+      </div>
+
+      <div class="space-y-12 mt-12">
+
+        <div class="fadein">
+          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Buttons</h3>
+          <div class="flex flex-wrap items-center gap-3">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-dark">Dark</button>
+            <button class="btn btn-primary btn-glow">Glow</button>
+            <button class="btn btn-outline-primary">Outline</button>
+            <button class="btn btn-primary btn-pill">Pill</button>
+            <div class="btn-group">
+              <button class="btn btn-outline">Left</button>
+              <button class="btn btn-outline">Middle</button>
+              <button class="btn btn-outline">Right</button>
+            </div>
+          </div>
         </div>
 
-        <div class="card card-body fadein fadein-delay-2">
-          <h3 class="card-title">State variants</h3>
-          <p class="card-subtitle mt-2">hover: focus: active: disabled: checked: placeholder: first: last: odd: even: group-hover: focus-within: and more.</p>
+        <div class="fadein">
+          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Badges & Live Indicators</h3>
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="badge badge-blue">Blue</span>
+            <span class="badge badge-green">Green</span>
+            <span class="badge badge-red">Red</span>
+            <span class="badge badge-yellow">Yellow</span>
+            <span class="badge badge-purple">Purple</span>
+            <span class="badge badge-emerald">Emerald</span>
+            <span class="badge badge-cyan">Cyan</span>
+            <span class="badge badge-pink">Pink</span>
+            <span class="badge badge-green badge-pill">
+              <span class="badge-dot-live"></span>
+              Live System
+            </span>
+          </div>
         </div>
 
-        <div class="card card-body fadein fadein-delay-3">
-          <h3 class="card-title">Components</h3>
-          <p class="card-subtitle mt-2">Pre-built btn, card, badge, input, select, alert, avatar, spinner, progress, table, nav, modal, breadcrumb.</p>
+        <div class="fadein">
+          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Cards & Glassmorphism</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card card-hover">
+              <div class="card-header">
+                <span class="card-title">Standard Card</span>
+              </div>
+              <div class="card-body">
+                Clean borders with soft elevation on hover.
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary btn-sm">Action</button>
+              </div>
+            </div>
+
+            <div class="card card-glass card-hover">
+              <div class="card-header">
+                <span class="card-title">Glass Card</span>
+              </div>
+              <div class="card-body">
+                Frosted glass effect with backdrop blur and translucency.
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-secondary btn-sm">Explore</button>
+              </div>
+            </div>
+
+            <div class="card card-hover bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+              <div class="card-header border-blue-400">
+                <span class="card-title text-white">Gradient Card</span>
+              </div>
+              <div class="card-body text-blue-100">
+                Rich gradient backgrounds with crisp text rendering.
+              </div>
+              <div class="card-footer border-blue-400 bg-transparent">
+                <button class="btn btn-light btn-sm">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fadein">
+          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Form Controls</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="form-group">
+              <label class="label label-required">Email Address</label>
+              <input type="email" class="input" placeholder="you@domain.com">
+              <p class="form-hint">We will never share your email.</p>
+            </div>
+
+            <div class="form-group">
+              <label class="label">Input Group</label>
+              <div class="input-group">
+                <span class="input-group-text">https://</span>
+                <input type="text" class="input" placeholder="yoursite.com">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="label">Interactive Toggle</label>
+              <div class="flex items-center gap-3 mt-2">
+                <label class="toggle">
+                  <input type="checkbox" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+                <span class="text-sm text-gray-700 font-medium">Auto-renew subscription</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fadein">
+          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Alerts</h3>
+          <div class="space-y-3">
+            <div class="alert alert-info">Information notice: New features are now available in version 1.1.0.</div>
+            <div class="alert alert-success">Operation successful: All packages built and validated without errors.</div>
+            <div class="alert alert-warning">Warning notice: Please verify your production environment settings.</div>
+            <div class="alert alert-error">Error alert: Invalid API token received from target host.</div>
+          </div>
+        </div>
+
+        <div class="fadein">
+          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Pure CSS Accordion</h3>
+          <div class="space-y-2 max-w-2xl">
+            <details class="accordion-item" open>
+              <summary class="accordion-header">
+                <span>How does ycsts compare to Tailwind CSS?</span>
+              </summary>
+              <div class="accordion-body">
+                ycsts combines comprehensive utility classes with pre-built component classes and signature animations like fadein right out of the box, requiring zero JavaScript build configuration to get started.
+              </div>
+            </details>
+            <details class="accordion-item">
+              <summary class="accordion-header">
+                <span>Can I use ycsts with React, Vue, or Next.js?</span>
+              </summary>
+              <div class="accordion-body">
+                Yes. Since ycsts outputs standard CSS files (ycsts.css and ycsts.min.css), you can import it into any framework with simple standard CSS imports.
+              </div>
+            </details>
+          </div>
         </div>
 
       </div>
@@ -100,159 +308,30 @@
   <section id="usage" class="py-20 px-6 bg-gray-50 border-t border-gray-100">
     <div class="container mx-auto max-w-3xl">
       <div class="section-header fadein">
-        <h2 class="section-title">Usage</h2>
-        <p class="section-subtitle">Link the stylesheet and start writing classes.</p>
+        <h2 class="section-title">Quick Start</h2>
+        <p class="section-subtitle">Choose the method that best fits your workflow.</p>
       </div>
 
-      <div class="mt-10 space-y-8">
+      <div class="space-y-8 mt-10">
 
-        <div class="fadein fadein-delay-1">
-          <h3 class="text-lg font-semibold text-gray-900 mb-3">Install</h3>
-          <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm font-mono overflow-x-auto">npm install ycsts</pre>
+        <div class="card card-body fadein fadein-delay-1">
+          <h3 class="text-base font-bold text-gray-900 mb-2">1. Instant CLI Initialization</h3>
+          <p class="text-sm text-gray-600 mb-3">Scaffold a working starter project with local CSS bundle in seconds:</p>
+          <pre class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">npx @yanzyu/ycsts init</pre>
         </div>
 
-        <div class="fadein fadein-delay-2">
-          <h3 class="text-lg font-semibold text-gray-900 mb-3">Link in HTML</h3>
-          <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm font-mono overflow-x-auto">&lt;link rel="stylesheet" href="node_modules/ycsts/dist/ycsts.css"&gt;</pre>
+        <div class="card card-body fadein fadein-delay-2">
+          <h3 class="text-base font-bold text-gray-900 mb-2">2. Install via npm</h3>
+          <p class="text-sm text-gray-600 mb-3">Add ycsts as a dependency in your modern Node.js project:</p>
+          <pre class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">npm install @yanzyu/ycsts</pre>
+          <p class="text-sm text-gray-600 mt-3 mb-1">Import into your JavaScript or HTML:</p>
+          <pre class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">&lt;link rel="stylesheet" href="node_modules/@yanzyu/ycsts/dist/ycsts.min.css"&gt;</pre>
         </div>
 
-        <div class="fadein fadein-delay-3">
-          <h3 class="text-lg font-semibold text-gray-900 mb-3">Use fadein</h3>
-          <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm font-mono overflow-x-auto">&lt;h1 class="fadein"&gt;This fades in&lt;/h1&gt;
-&lt;p class="fadein fadein-delay-1"&gt;This fades in after 100ms&lt;/p&gt;
-&lt;p class="fadein fadein-delay-2"&gt;This fades in after 200ms&lt;/p&gt;</pre>
-        </div>
-
-        <div class="fadein fadein-delay-4">
-          <h3 class="text-lg font-semibold text-gray-900 mb-3">Fadein variants</h3>
-          <div class="card card-body space-y-3">
-            <div class="flex items-center gap-3 flex-wrap">
-              <code class="badge badge-gray font-mono">fadein</code>
-              <span class="text-sm text-gray-600">0.4s ease-out</span>
-            </div>
-            <div class="flex items-center gap-3 flex-wrap">
-              <code class="badge badge-gray font-mono">fadein-fast</code>
-              <span class="text-sm text-gray-600">0.2s ease-out</span>
-            </div>
-            <div class="flex items-center gap-3 flex-wrap">
-              <code class="badge badge-gray font-mono">fadein-slow</code>
-              <span class="text-sm text-gray-600">0.8s ease-out</span>
-            </div>
-            <div class="flex items-center gap-3 flex-wrap">
-              <code class="badge badge-gray font-mono">fadein-delay-1</code>
-              <span class="text-sm text-gray-600">100ms delay</span>
-            </div>
-            <div class="flex items-center gap-3 flex-wrap">
-              <code class="badge badge-gray font-mono">fadein-delay-2</code>
-              <span class="text-sm text-gray-600">200ms delay</span>
-            </div>
-            <div class="flex items-center gap-3 flex-wrap">
-              <code class="badge badge-gray font-mono">fadein-delay-3</code>
-              <span class="text-sm text-gray-600">300ms delay</span>
-            </div>
-            <div class="flex items-center gap-3 flex-wrap">
-              <code class="badge badge-gray font-mono">fadein-delay-4</code>
-              <span class="text-sm text-gray-600">500ms delay</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 px-6 bg-white border-t border-gray-100">
-    <div class="container mx-auto max-w-5xl">
-      <div class="section-header fadein">
-        <h2 class="section-title">Component preview</h2>
-        <p class="section-subtitle">A sample of the pre-built component classes.</p>
-      </div>
-
-      <div class="mt-12 space-y-12">
-
-        <div class="fadein fadein-delay-1">
-          <h3 class="text-base font-semibold text-gray-500 uppercase tracking-wider mb-4">Buttons</h3>
-          <div class="flex flex-wrap gap-3">
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-secondary">Secondary</button>
-            <button class="btn btn-outline">Outline</button>
-            <button class="btn btn-danger">Danger</button>
-            <button class="btn btn-ghost">Ghost</button>
-            <button class="btn btn-primary btn-sm">Small</button>
-            <button class="btn btn-primary btn-lg">Large</button>
-            <button class="btn btn-primary" disabled>Disabled</button>
-          </div>
-        </div>
-
-        <div class="fadein fadein-delay-2">
-          <h3 class="text-base font-semibold text-gray-500 uppercase tracking-wider mb-4">Badges</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-blue">Blue</span>
-            <span class="badge badge-green">Green</span>
-            <span class="badge badge-red">Red</span>
-            <span class="badge badge-yellow">Yellow</span>
-            <span class="badge badge-gray">Gray</span>
-            <span class="badge badge-purple">Purple</span>
-            <span class="badge badge-indigo">Indigo</span>
-            <span class="badge badge-orange">Orange</span>
-          </div>
-        </div>
-
-        <div class="fadein fadein-delay-3">
-          <h3 class="text-base font-semibold text-gray-500 uppercase tracking-wider mb-4">Alerts</h3>
-          <div class="space-y-3">
-            <div class="alert alert-info">An informational message with context about the current state.</div>
-            <div class="alert alert-success">Operation completed successfully. Everything looks good.</div>
-            <div class="alert alert-warning">Check your settings before proceeding. This may have side effects.</div>
-            <div class="alert alert-error">Something went wrong. Please try again or contact support.</div>
-          </div>
-        </div>
-
-        <div class="fadein fadein-delay-4">
-          <h3 class="text-base font-semibold text-gray-500 uppercase tracking-wider mb-4">Form elements</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
-            <div class="form-group">
-              <label class="label label-required">Email address</label>
-              <input type="email" class="input" placeholder="you@example.com">
-            </div>
-            <div class="form-group">
-              <label class="label">Role</label>
-              <select class="select">
-                <option>Designer</option>
-                <option>Engineer</option>
-                <option>Manager</option>
-              </select>
-            </div>
-            <div class="form-group md:col-span-2">
-              <label class="label">Notes</label>
-              <textarea class="textarea" placeholder="Write something..."></textarea>
-              <p class="form-hint">Optional. Max 500 characters.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="fadein fadein-delay-1">
-          <h3 class="text-base font-semibold text-gray-500 uppercase tracking-wider mb-4">Progress</h3>
-          <div class="space-y-4 max-w-md">
-            <div>
-              <div class="flex justify-between text-sm text-gray-600 mb-1">
-                <span>Default</span><span>72%</span>
-              </div>
-              <div class="progress"><div class="progress-bar" style="width:72%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between text-sm text-gray-600 mb-1">
-                <span>Green</span><span>48%</span>
-              </div>
-              <div class="progress"><div class="progress-bar progress-bar-green" style="width:48%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between text-sm text-gray-600 mb-1">
-                <span>Red</span><span>30%</span>
-              </div>
-              <div class="progress"><div class="progress-bar progress-bar-red" style="width:30%"></div></div>
-            </div>
-          </div>
+        <div class="card card-body fadein fadein-delay-3">
+          <h3 class="text-base font-bold text-gray-900 mb-2">3. Direct CDN Link</h3>
+          <p class="text-sm text-gray-600 mb-3">No installation required. Drop directly into any HTML document:</p>
+          <pre class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yanzyu/ycsts@1.1.0/dist/ycsts.min.css"&gt;</pre>
         </div>
 
       </div>
@@ -263,12 +342,12 @@
 
 <footer class="bg-gray-900 text-gray-400 py-12 px-6">
   <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-4">
-    <div class="fadein">
-      <span class="text-white font-bold text-lg">ycsts</span>
-      <span class="ml-3 text-sm">v1.0.0</span>
+    <div class="flex items-center gap-3">
+      <span class="text-xl font-bold text-white">ycsts</span>
+      <span class="text-xs bg-gray-800 text-gray-300 px-2 py-0.5 rounded">v1.1.0</span>
     </div>
-    <div class="flex items-center gap-6 text-sm fadein fadein-delay-1">
-      <a href="https://github.com/yanzyuyu/ycsts-framework" class="hover:text-white transition-colors duration-150">GitHub</a>
+    <div class="flex items-center gap-6 text-sm">
+      <a href="https://github.com/yanzyuyu/ycsts-framework" class="hover:text-white transition-colors duration-150">GitHub Repository</a>
       <span>MIT License</span>
     </div>
   </div>
