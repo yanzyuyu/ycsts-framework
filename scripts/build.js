@@ -20,8 +20,8 @@ function buildCSS(options = {}) {
     .process(css, { from: src, to: outFull })
     .then((result) => {
       fs.writeFileSync(outFull, result.css);
-      return postcss([postcssImport, autoprefixer, cssnano({ preset: "default" })]).process(css, {
-        from: src,
+      return postcss([cssnano({ preset: "default" })]).process(result.css, {
+        from: outFull,
         to: outMin,
       });
     })
@@ -40,8 +40,12 @@ function buildCSS(options = {}) {
 module.exports = buildCSS;
 
 if (require.main === module) {
-  buildCSS().catch((err) => {
-    process.stderr.write(err.message + "\n");
-    process.exit(1);
-  });
+  buildCSS()
+    .then(() => {
+      process.exit(0);
+    })
+    .catch((err) => {
+      process.stderr.write(err.message + "\n");
+      process.exit(1);
+    });
 }

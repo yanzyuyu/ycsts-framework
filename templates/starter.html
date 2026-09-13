@@ -3,21 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ycsts - The Modern CSS Framework</title>
+<title>ycsts - The Ultimate Modern CSS Framework</title>
 <link rel="stylesheet" href="ycsts.min.css">
 </head>
-<body class="bg-gray-50 min-h-screen font-sans text-gray-900">
+<body class="bg-gray-50 min-h-screen font-sans text-gray-900 selection-glow">
 
 <header class="navbar sticky top-0 z-40 bg-white border-b border-gray-200">
-  <div class="container mx-auto px-6 py-2 flex items-center justify-between">
+  <div class="container mx-auto px-6 py-3 flex items-center justify-between">
     <div class="flex items-center gap-3 fadein">
       <span class="text-2xl font-black text-blue-600 tracking-tight">ycsts</span>
-      <span class="badge badge-blue badge-pill">v1.2.0</span>
+      <span class="badge badge-blue badge-pill text-xs">v1.3.0</span>
+      <span class="badge badge-emerald flex items-center gap-1.5 text-xs">
+        <span class="badge-dot-live text-emerald-500"></span> Production Ready
+      </span>
     </div>
     <nav class="flex items-center gap-6">
+      <a href="#custom-elements" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Custom Elements</a>
       <a href="#animations" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Animations</a>
       <a href="#components" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Components</a>
-      <a href="#usage" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Usage</a>
+      <a href="#quickstart" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Quickstart</a>
       <a href="https://github.com/yanzyuyu/ycsts-framework" class="btn btn-primary btn-sm btn-glow fadein fadein-delay-1">GitHub</a>
     </nav>
   </div>
@@ -25,21 +29,31 @@
 
 <main>
 
-  <section class="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-blue-50 to-gray-50">
+  <section class="py-20 px-6 relative overflow-hidden bg-gradient-to-b from-blue-50 via-indigo-50 to-gray-50">
     <div class="container mx-auto text-center max-w-4xl">
       <div class="fadein">
-        <span class="badge badge-indigo badge-pill px-4 py-1 text-sm font-semibold mb-6">Ultra-Fast &bull; Zero Config &bull; Pure CSS</span>
+        <span class="badge badge-indigo badge-pill px-4 py-1 text-sm font-semibold mb-6 shadow-sm">Utility Engine &bull; Luxury Components &bull; Single-Word Motion</span>
       </div>
       <h1 class="text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight mt-4 fadein fadein-delay-1">
         Next-Level CSS Framework.<br>
-        <span class="text-blue-600">Fadein in one word.</span>
+        <span class="text-blue-600">Fadein dalam 1 kata.</span>
       </h1>
-      <p class="mt-6 text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto fadein fadein-delay-2">
-        A complete modern stylesheet providing an exhaustive utility engine, rich animation suite with signature <code class="font-mono text-sm bg-blue-100 text-blue-800 px-2 py-0.5 rounded">fadein</code>, and polished production-ready components.
+      <p class="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto fadein fadein-delay-2">
+        Dibangun untuk menggantikan kompleksitas Tailwind dan keusangan Bootstrap. Menghadirkan kustomisasi elemen HTML modern, scrollbar bercahaya, popup modal, font Poppins terintegrasi, dan animasi entrance elegan.
       </p>
-      <div class="mt-10 flex flex-wrap items-center justify-center gap-4 fadein fadein-delay-3">
-        <a href="#usage" class="btn btn-gradient-primary btn-lg btn-glow hover-scale">Get Started</a>
-        <a href="#animations" class="btn btn-outline btn-lg hover-float">Explore Animations</a>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4 fadein fadein-delay-3">
+        <a href="#custom-elements" class="btn btn-gradient-primary btn-lg btn-glow hover-scale">Lihat Custom Elements</a>
+        <button type="button" class="btn btn-outline btn-lg hover-float" id="trigger-hero-modal">Buka Modal Preview</button>
+      </div>
+
+      <div class="mt-10 max-w-md mx-auto fadein fadein-delay-4">
+        <div class="bg-gray-900 text-gray-100 rounded-xl px-4 py-3 shadow-lg flex items-center justify-between font-mono text-sm border border-gray-800">
+          <div class="flex items-center gap-2 overflow-hidden">
+            <span class="text-blue-400 font-bold">$</span>
+            <span class="truncate text-gray-200" id="hero-cmd">npx ycsts-framework init</span>
+          </div>
+          <button type="button" class="btn btn-soft-primary btn-sm py-1 px-2.5 text-xs shrink-0 ml-2" id="hero-copy-btn">Salin</button>
+        </div>
       </div>
     </div>
   </section>
@@ -49,318 +63,414 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div class="stat-card fadein fadein-delay-1 hover-float">
           <div class="stat-title">Utility Classes</div>
-          <div class="stat-value text-blue-600">3,000+</div>
-          <div class="stat-desc">Full Tailwind-level coverage</div>
+          <div class="stat-value text-blue-600">3,200+</div>
+          <div class="stat-desc">Cakupan lengkap setara Tailwind</div>
         </div>
         <div class="stat-card fadein fadein-delay-2 hover-float">
           <div class="stat-title">Animation Library</div>
-          <div class="stat-value text-indigo-600">45+</div>
-          <div class="stat-desc">Signature fadein suite + modern UI</div>
+          <div class="stat-value text-indigo-600">50+</div>
+          <div class="stat-desc">Fadein family & ambient loops</div>
         </div>
         <div class="stat-card fadein fadein-delay-3 hover-float">
-          <div class="stat-title">Components</div>
-          <div class="stat-value text-emerald-600">40+</div>
-          <div class="stat-desc">Pre-built interactive elements</div>
+          <div class="stat-title">Custom Elements</div>
+          <div class="stat-value text-emerald-600">45+</div>
+          <div class="stat-desc">Select, scrollbar, modal, toggles</div>
         </div>
         <div class="stat-card fadein fadein-delay-4 hover-float">
-          <div class="stat-title">Runtime JavaScript</div>
-          <div class="stat-value text-purple-600">0 KB</div>
-          <div class="stat-desc">100% Pure CSS implementation</div>
+          <div class="stat-title">Typography Ready</div>
+          <div class="stat-value text-purple-600">Poppins</div>
+          <div class="stat-desc">Google Fonts embed bawaan</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="custom-elements" class="py-20 px-6">
+    <div class="container mx-auto max-w-6xl">
+      <div class="section-header text-center mb-16">
+        <div class="badge badge-emerald badge-pill mb-2">Paling Dicari</div>
+        <h2 class="section-title">Custom Element Studio</h2>
+        <p class="section-subtitle">Tinggalkan tampilan elemen HTML bawaan OS yang kaku. ycsts menyediakan sistem kustomisasi select option, scrollbar, dan dialog bergaya aplikasi kelas dunia.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <div class="card card-body shadow-md border border-gray-200">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge badge-blue">Luxury Custom Select</span>
+            <span class="text-xs text-gray-400 font-mono">.custom-select</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-6">Dropdown interaktif dengan fitur pencarian, deskripsi opsi, indikator status, dan checkmark aktif.</p>
+
+          <div class="custom-select mb-4" id="luxury-select-demo">
+            <button type="button" class="custom-select-trigger" id="luxury-select-btn">
+              <span class="custom-select-value" id="luxury-select-display">
+                <span class="w-2.5 h-2.5 rounded-full bg-blue-500 shrink-0"></span>
+                <span>Pilih Framework Favorit</span>
+              </span>
+              <svg class="custom-select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="custom-select-menu" id="luxury-select-dropdown">
+              <div class="custom-select-search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                <input type="text" placeholder="Cari opsi..." id="luxury-search-input">
+              </div>
+              <div class="custom-select-options" id="luxury-options-container">
+                <div class="custom-select-group-label">Pilihan Unggulan</div>
+                <div class="custom-select-option is-selected" data-val="ycsts" data-title="ycsts Framework" data-color="bg-blue-500">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500 shrink-0"></span>
+                    <div>
+                      <span class="option-title">ycsts Framework</span>
+                      <span class="option-desc">Fadein 1 kata & luxury components</span>
+                    </div>
+                  </div>
+                  <svg class="option-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="custom-select-option" data-val="tailwind" data-title="Tailwind CSS" data-color="bg-cyan-500">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-500 shrink-0"></span>
+                    <div>
+                      <span class="option-title">Tailwind CSS</span>
+                      <span class="option-desc">Utility-first tanpa komponen default</span>
+                    </div>
+                  </div>
+                  <svg class="option-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="custom-select-option" data-val="bootstrap" data-title="Bootstrap 5" data-color="bg-purple-500">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-purple-500 shrink-0"></span>
+                    <div>
+                      <span class="option-title">Bootstrap 5</span>
+                      <span class="option-desc">Komponen klasik dengan keterikatan jQuery/JS</span>
+                    </div>
+                  </div>
+                  <svg class="option-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="custom-select-option" data-val="bulma" data-title="Bulma CSS" data-color="bg-emerald-500">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+                    <div>
+                      <span class="option-title">Bulma CSS</span>
+                      <span class="option-desc">Framework murni flexbox</span>
+                    </div>
+                  </div>
+                  <svg class="option-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 bg-blue-50 border border-blue-100 rounded-lg text-xs text-blue-900 flex items-center justify-between mt-auto">
+            <span>Nilai Terpilih:</span>
+            <span class="font-bold font-mono" id="luxury-result-tag">ycsts Framework</span>
+          </div>
+        </div>
+
+        <div class="card card-body shadow-md border border-gray-200">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge badge-indigo">Enhanced Native Select</span>
+            <span class="text-xs text-gray-400 font-mono">.select-custom</span>
+          </div>
+          <p class="text-sm text-gray-600 mb-6">Tag &lt;select&gt; standar HTML yang telah disempurnakan dengan font Poppins, ikon chevron SVG tajam, dan radius modern.</p>
+
+          <div class="space-y-4 mb-4">
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5">Default Enhanced Select</label>
+              <select class="select-custom" id="native-select-demo">
+                <option value="1">Opsi Satu - Solusi Instan</option>
+                <option value="2">Opsi Dua - Kustomisasi Bebas</option>
+                <option value="3">Opsi Tiga - Performa Maksimal</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 mb-1.5">Pill Rounded Select</label>
+              <select class="select-custom select-pill">
+                <option>Paket Personal (Gratis)</option>
+                <option selected>Paket Developer Pro</option>
+                <option>Paket Enterprise</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="p-3 bg-indigo-50 border border-indigo-100 rounded-lg text-xs text-indigo-900 flex items-center justify-between mt-auto">
+            <span>Status Native:</span>
+            <span class="font-semibold" id="native-result-tag">Opsi Satu</span>
+          </div>
+        </div>
+
+        <div class="card card-body bg-gray-900 text-gray-100 shadow-md border border-gray-800">
+          <div class="flex items-center justify-between mb-4">
+            <span class="badge badge-purple">Dark Custom Select</span>
+            <span class="text-xs text-gray-400 font-mono">.custom-select-dark</span>
+          </div>
+          <p class="text-sm text-gray-400 mb-6">Varian gelap berdefinisi tinggi untuk dashboard analitik, dark mode UI, dan tema futuristik.</p>
+
+          <div class="custom-select custom-select-dark mb-4" id="dark-select-demo">
+            <button type="button" class="custom-select-trigger" id="dark-select-btn">
+              <span class="custom-select-value" id="dark-select-display">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shrink-0"></span>
+                <span>Server Cluster Jakarta</span>
+              </span>
+              <svg class="custom-select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="custom-select-menu" id="dark-select-dropdown">
+              <div class="custom-select-search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                <input type="text" placeholder="Cari cluster..." id="dark-search-input">
+              </div>
+              <div class="custom-select-options" id="dark-options-container">
+                <div class="custom-select-option is-selected" data-val="jkt-1" data-title="Jakarta AP-Southeast-1" data-color="bg-emerald-400">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shrink-0"></span>
+                    <div>
+                      <span class="option-title">Jakarta AP-Southeast-1</span>
+                      <span class="option-desc">Latency 4ms &bull; 99.99% Uptime</span>
+                    </div>
+                  </div>
+                  <svg class="option-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="custom-select-option" data-val="sgp-1" data-title="Singapore SG-1" data-color="bg-blue-400">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-400 shrink-0"></span>
+                    <div>
+                      <span class="option-title">Singapore SG-1</span>
+                      <span class="option-desc">Latency 12ms &bull; 100% Uptime</span>
+                    </div>
+                  </div>
+                  <svg class="option-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div class="custom-select-option" data-val="tyo-1" data-title="Tokyo AP-Northeast-1" data-color="bg-purple-400">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-purple-400 shrink-0"></span>
+                    <div>
+                      <span class="option-title">Tokyo AP-Northeast-1</span>
+                      <span class="option-desc">Latency 65ms &bull; High Memory</span>
+                    </div>
+                  </div>
+                  <svg class="option-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 bg-gray-800 border border-gray-700 rounded-lg text-xs text-emerald-400 flex items-center justify-between mt-auto">
+            <span>Cluster Aktif:</span>
+            <span class="font-bold font-mono" id="dark-result-tag">Jakarta AP-Southeast-1</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="scrollbars-selection" class="py-16 px-6 bg-gray-100">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+
+        <div class="card card-body bg-gray-900 text-gray-100 shadow-xl border border-gray-800 flex flex-col">
+          <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-red-500"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500"></span>
+              <span class="text-xs text-gray-400 font-mono ml-2">terminal-scroll-demo.sh</span>
+            </div>
+            <span class="badge badge-blue text-xs font-mono">.scrollbar-glow</span>
+          </div>
+          <p class="text-xs text-gray-400 mb-3">Scroll box di bawah ini menggunakan scrollbar bercahaya gradien murni CSS tanpa library JavaScript eksternal:</p>
+
+          <div class="scrollbar-glow overflow-y-auto p-4 bg-gray-950 rounded-lg border border-gray-800 font-mono text-xs leading-relaxed max-h-56 space-y-2 text-gray-300">
+            <div class="text-green-400"># Memulai instalasi framework ycsts</div>
+            <div>$ npx ycsts-framework init</div>
+            <div class="text-blue-400">[info] Mengunduh template index.html (100% human-grade)</div>
+            <div class="text-blue-400">[info] Mengunduh ycsts.min.css dengan Google Font Poppins</div>
+            <div class="text-emerald-400">[sukses] Project berhasil diinisialisasi!</div>
+            <div>$ npm run build</div>
+            <div class="text-gray-400">[compile] PostCSS menjalankan postcss-import...</div>
+            <div class="text-gray-400">[compile] Autoprefixer menambahkan vendor prefixes...</div>
+            <div class="text-gray-400">[compile] cssnano melakukan kompresi minified bundle...</div>
+            <div class="text-emerald-400">&gt; dist/ycsts.css: 202.3 KB</div>
+            <div class="text-emerald-400">&gt; dist/ycsts.min.css: 163.3 KB</div>
+            <div class="text-purple-400">[ready] Server lokal berjalan di port 3000</div>
+            <div>$ npx ycsts-framework --version</div>
+            <div class="text-yellow-400">&gt;&gt; 1.3.0 (Latest Release)</div>
+            <div class="text-gray-500"># Baris tambahan untuk menguji scrollbar yang mulus</div>
+            <div class="text-gray-500"># Scrollbar-glow otomatis menyala dengan gradien biru ke ungu</div>
+            <div class="text-gray-500"># End of log stream - Sistem berjalan optimal</div>
+          </div>
+        </div>
+
+        <div class="card card-body shadow-xl border border-gray-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge badge-purple">Neon Text Selection</span>
+              <span class="text-xs text-gray-400 font-mono">.selection-glow</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Highlight Teks Bercahaya</h3>
+            <p class="text-sm text-gray-600 mb-6">
+              Seleksi / blok teks di dalam kartu ini menggunakan kursor Anda. ycsts menerapkan efek highlight aksen biru bercahaya yang tajam dan nyaman di mata secara default.
+            </p>
+
+            <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl mb-4">
+              <blockquote class="text-base font-semibold text-blue-950 leading-relaxed">
+                "Framework yang baik bukan yang paling rumit, tetapi yang paling memberikan kebebasan dan keindahan tanpa menyiksa pengembangnya."
+              </blockquote>
+              <div class="mt-3 text-xs text-blue-700 font-medium">&mdash; Prinsip Desain ycsts 1.3.0</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-500">
+            <span>Coba blok teks kutipan di atas sekarang</span>
+            <span class="badge badge-blue badge-pill">Live CSS Selection</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <section id="animations" class="py-20 px-6">
-    <div class="container mx-auto max-w-5xl">
-      <div class="section-header">
-        <div class="badge badge-blue badge-pill mb-2">Motion Design</div>
-        <h2 class="section-title">Signature Entrance Animations</h2>
-        <p class="section-subtitle">Apply smooth, hardware-accelerated animations using single utility classes. No JavaScript required.</p>
+    <div class="container mx-auto max-w-6xl">
+      <div class="section-header text-center mb-12">
+        <div class="badge badge-blue badge-pill mb-2">Motion Laboratory</div>
+        <h2 class="section-title">Laboratorium Animasi 1 Kata</h2>
+        <p class="section-subtitle">Klik tombol di bawah ini untuk melihat dan mengulang efek animasi secara langsung pada panggung uji coba.</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-        <div class="card card-body text-center fadein hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein</div>
-          <div class="text-2xl mb-1">&uarr;</div>
-          <div class="text-sm font-semibold">Standard</div>
-        </div>
-        <div class="card card-body text-center fadein-up hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-up</div>
-          <div class="text-2xl mb-1">&uarr;&uarr;</div>
-          <div class="text-sm font-semibold">From Below</div>
-        </div>
-        <div class="card card-body text-center fadein-scale hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-scale</div>
-          <div class="text-2xl mb-1">&oplus;</div>
-          <div class="text-sm font-semibold">Scale In</div>
-        </div>
-        <div class="card card-body text-center fadein-blur hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-blur</div>
-          <div class="text-2xl mb-1">&approx;</div>
-          <div class="text-sm font-semibold">Lens Focus</div>
-        </div>
-        <div class="card card-body text-center fadein-bounce hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-bounce</div>
-          <div class="text-2xl mb-1">&cudarrr;</div>
-          <div class="text-sm font-semibold">Playful Bounce</div>
-        </div>
-        <div class="card card-body text-center fadein-glow hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-glow</div>
-          <div class="text-2xl mb-1">&sun;</div>
-          <div class="text-sm font-semibold">Illuminating Glow</div>
-        </div>
-        <div class="card card-body text-center fadein-expand hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-expand</div>
-          <div class="text-2xl mb-1">&harr;</div>
-          <div class="text-sm font-semibold">Smooth Expand</div>
-        </div>
-        <div class="card card-body text-center fadein-pop hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-pop</div>
-          <div class="text-2xl mb-1">&starf;</div>
-          <div class="text-sm font-semibold">Energetic Pop</div>
-        </div>
-        <div class="card card-body text-center fadein-swing hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-swing</div>
-          <div class="text-2xl mb-1">&#8635;</div>
-          <div class="text-sm font-semibold">3D Swing</div>
-        </div>
-        <div class="card card-body text-center fadein-elastic hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-elastic</div>
-          <div class="text-2xl mb-1">&curren;</div>
-          <div class="text-sm font-semibold">Elastic Spring</div>
-        </div>
-        <div class="card card-body text-center fadein-tilt hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-tilt</div>
-          <div class="text-2xl mb-1">&#9022;</div>
-          <div class="text-sm font-semibold">Perspective Tilt</div>
-        </div>
-        <div class="card card-body text-center fadein-flip-x hover-scale">
-          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-flip-x</div>
-          <div class="text-2xl mb-1">&circlearrowright;</div>
-          <div class="text-sm font-semibold">3D Card Flip</div>
+      <div class="max-w-2xl mx-auto mb-10 text-center">
+        <div class="p-8 bg-white border border-gray-200 shadow-xl rounded-2xl flex flex-col items-center justify-center min-h-[160px]" id="animation-stage">
+          <div class="p-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl shadow-lg text-center" id="animation-target">
+            <div class="text-lg font-bold font-poppins" id="animation-title">.fadein</div>
+            <div class="text-xs opacity-80 mt-1" id="animation-subtitle">Animasi default fade + translate up</div>
+          </div>
         </div>
       </div>
 
-      <div class="section-header mt-16">
-        <div class="badge badge-purple badge-pill mb-2">Infinite & Continuous</div>
-        <h2 class="section-title">Modern Ambient Motion</h2>
-        <p class="section-subtitle">Engaging ambient motion loops for hero cards, status indicators, and badges.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="card card-glass card-body text-center animate-float">
-          <div class="text-xs font-mono text-indigo-600 mb-2">.animate-float</div>
-          <div class="text-lg font-bold">Floating Surface</div>
-          <p class="text-sm text-gray-500 mt-2">Smooth sinusoidal hover motion ideal for hero cards.</p>
-        </div>
-        <div class="card card-body text-center animate-pulse-glow">
-          <div class="text-xs font-mono text-blue-600 mb-2">.animate-pulse-glow</div>
-          <div class="text-lg font-bold">Neon Pulse Aura</div>
-          <p class="text-sm text-gray-500 mt-2">Breathing box-shadow aura that draws user focus.</p>
-        </div>
-        <div class="card card-body text-center animate-shimmer overflow-hidden">
-          <div class="text-xs font-mono text-emerald-600 mb-2">.animate-shimmer</div>
-          <div class="text-lg font-bold">Skeleton Shimmer</div>
-          <p class="text-sm text-gray-500 mt-2">Liquid metallic shine sweep for placeholders and loading states.</p>
-        </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto">
+        <button type="button" class="btn btn-outline btn-sm anim-trigger active" data-anim="fadein" data-desc="Animasi default fade + translate up">.fadein</button>
+        <button type="button" class="btn btn-outline btn-sm anim-trigger" data-anim="fadein-up" data-desc="Slide masuk dari bawah 24px">.fadein-up</button>
+        <button type="button" class="btn btn-outline btn-sm anim-trigger" data-anim="fadein-scale" data-desc="Scale zoom masuk dari 92%">.fadein-scale</button>
+        <button type="button" class="btn btn-outline btn-sm anim-trigger" data-anim="fadein-blur" data-desc="Transisi fokus dari 10px blur">.fadein-blur</button>
+        <button type="button" class="btn btn-outline btn-sm anim-trigger" data-anim="fadein-bounce" data-desc="Efek entrance pantulan pegas">.fadein-bounce</button>
+        <button type="button" class="btn btn-outline btn-sm anim-trigger" data-anim="fadein-flip" data-desc="Efek balik perspektif 3D">.fadein-flip</button>
+        <button type="button" class="btn btn-outline btn-sm anim-trigger" data-anim="fadein-spiral" data-desc="Rotasi spiral masuk lembut">.fadein-spiral</button>
+        <button type="button" class="btn btn-outline btn-sm anim-trigger" data-anim="animate-float" data-desc="Gerakan melayang kontinu tak berujung">.animate-float</button>
       </div>
     </div>
   </section>
 
-  <section id="components" class="py-20 px-6 bg-white border-y border-gray-100">
-    <div class="container mx-auto max-w-5xl">
-      <div class="section-header">
-        <div class="badge badge-emerald badge-pill mb-2">Component Gallery</div>
-        <h2 class="section-title">Polished Modern Elements</h2>
-        <p class="section-subtitle">Comprehensive set of pure-CSS components designed for modern dashboards and SaaS products.</p>
+  <section id="components" class="py-20 px-6 bg-gray-50 border-t border-gray-200">
+    <div class="container mx-auto max-w-6xl">
+      <div class="section-header text-center mb-16">
+        <div class="badge badge-indigo badge-pill mb-2">Komponen Terlengkap</div>
+        <h2 class="section-title">Koleksi Komponen Modern</h2>
+        <p class="section-subtitle">Semua elemen esensial siap pakai untuk membangun antarmuka web yang bersih dan berdaya guna.</p>
       </div>
 
-      <div class="mb-12">
-        <h3 class="text-xl font-bold mb-4">Button System</h3>
-        <div class="flex flex-wrap gap-3 items-center mb-4">
-          <button class="btn btn-primary">Primary</button>
-          <button class="btn btn-secondary">Secondary</button>
-          <button class="btn btn-success">Success</button>
-          <button class="btn btn-danger">Danger</button>
-          <button class="btn btn-warning">Warning</button>
-          <button class="btn btn-info">Info</button>
-          <button class="btn btn-dark">Dark</button>
-          <button class="btn btn-light">Light</button>
-          <button class="btn btn-outline">Outline</button>
-        </div>
-        <div class="flex flex-wrap gap-3 items-center mb-4">
-          <button class="btn btn-soft-primary">Soft Blue</button>
-          <button class="btn btn-soft-success">Soft Green</button>
-          <button class="btn btn-soft-danger">Soft Red</button>
-          <button class="btn btn-soft-warning">Soft Amber</button>
-          <button class="btn btn-soft-info">Soft Cyan</button>
-          <button class="btn btn-soft-dark">Soft Dark</button>
-        </div>
-        <div class="flex flex-wrap gap-3 items-center">
-          <button class="btn btn-gradient-primary btn-glow">Gradient Blue</button>
-          <button class="btn btn-gradient-indigo btn-glow-indigo">Gradient Indigo</button>
-          <button class="btn btn-gradient-rose btn-glow-rose">Gradient Rose</button>
-          <button class="btn btn-gradient-sunset">Sunset Glow</button>
-          <button class="btn btn-gradient-emerald btn-glow-emerald">Gradient Emerald</button>
-          <button class="btn btn-gradient-cyber">Cyber Glow</button>
-          <button class="btn btn-primary btn-loading">Loading</button>
-          <button class="btn btn-primary btn-pill">Pill Shape</button>
-        </div>
-      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <div class="mb-12">
-        <h3 class="text-xl font-bold mb-4">Glassmorphism & Surfaces</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 bg-gradient-to-br from-blue-600 to-indigo-900 rounded-2xl">
-          <div class="card card-glass card-body hover-float">
-            <span class="badge badge-blue badge-pill mb-2">Glass Light</span>
-            <div class="text-lg font-bold text-gray-900">Frosted Glass</div>
-            <p class="text-sm text-gray-700 mt-2">Backdrop-filtered blurred glass surface with soft border highlights.</p>
-          </div>
-          <div class="card card-glass-dark card-body hover-float">
-            <span class="badge badge-purple badge-pill mb-2">Glass Dark</span>
-            <div class="text-lg font-bold text-white">Dark Glass Surface</div>
-            <p class="text-sm text-gray-300 mt-2">High contrast frosted glass for dark backgrounds and night modes.</p>
-          </div>
-          <div class="card card-glass-bordered card-body hover-float">
-            <span class="badge badge-emerald badge-pill mb-2">Glass Highlight</span>
-            <div class="text-lg font-bold text-gray-900">Accent Border Glass</div>
-            <p class="text-sm text-gray-700 mt-2">Enhanced border tint reflecting ambient illumination.</p>
+        <div class="card card-body shadow-sm">
+          <h3 class="text-base font-bold text-gray-900 mb-3">Modern Toggle Switch</h3>
+          <p class="text-xs text-gray-500 mb-4">Pengganti switch checkbox biasa dengan animasi geser halus.</p>
+          <div class="space-y-3">
+            <label class="flex items-center justify-between cursor-pointer p-2 rounded-lg hover:bg-gray-50">
+              <span class="text-sm font-medium text-gray-700">Notifikasi Email</span>
+              <input type="checkbox" class="toggle" checked>
+            </label>
+            <label class="flex items-center justify-between cursor-pointer p-2 rounded-lg hover:bg-gray-50">
+              <span class="text-sm font-medium text-gray-700">Backup Otomatis</span>
+              <input type="checkbox" class="toggle toggle-emerald" checked>
+            </label>
+            <label class="flex items-center justify-between cursor-pointer p-2 rounded-lg hover:bg-gray-50">
+              <span class="text-sm font-medium text-gray-700">Mode Developer</span>
+              <input type="checkbox" class="toggle toggle-purple">
+            </label>
           </div>
         </div>
-      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <div>
-          <h3 class="text-xl font-bold mb-4">Form Controls & Floating Labels</h3>
-          <div class="card card-body space-y-4">
-            <div class="form-floating">
-              <input type="text" class="input" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
+        <div class="card card-body shadow-sm">
+          <h3 class="text-base font-bold text-gray-900 mb-3">Button Hierarchy</h3>
+          <p class="text-xs text-gray-500 mb-4">Varian tombol modern: solid, soft, gradient, dan outline.</p>
+          <div class="flex flex-wrap gap-2.5">
+            <button class="btn btn-primary btn-sm">Primary</button>
+            <button class="btn btn-soft-primary btn-sm">Soft Blue</button>
+            <button class="btn btn-gradient-primary btn-sm">Gradient</button>
+            <button class="btn btn-outline btn-sm">Outline</button>
+            <button class="btn btn-primary btn-glow btn-sm">Glow</button>
+            <button class="btn btn-primary btn-pill btn-sm">Pill Button</button>
+          </div>
+        </div>
+
+        <div class="card card-body shadow-sm">
+          <h3 class="text-base font-bold text-gray-900 mb-3">Popup Modal & Dialog</h3>
+          <p class="text-xs text-gray-500 mb-4">Modal berlatar belakang blur dengan animasi masuk scale.</p>
+          <button type="button" class="btn btn-gradient-primary w-full" id="open-modal-btn">Buka Modal Interaktif</button>
+          <div class="mt-4 p-3 bg-gray-100 rounded-lg text-xs text-gray-600 text-center font-mono">
+            .modal-overlay + .modal
+          </div>
+        </div>
+
+        <div class="card card-body shadow-sm lg:col-span-2">
+          <h3 class="text-base font-bold text-gray-900 mb-3">Pure-CSS Accordion FAQ</h3>
+          <div class="space-y-2">
+            <details class="accordion-item" open>
+              <summary class="accordion-header">
+                <span class="font-medium">Apakah ycsts benar-benar tidak butuh setup build awal?</span>
+                <span class="text-xs text-gray-400">&blacktriangledown;</span>
+              </summary>
+              <div class="accordion-body text-sm text-gray-600">
+                Tepat sekali. Saat menjalankan <code>npx ycsts-framework init</code>, framework langsung menyalin file <code>ycsts.min.css</code> ke proyek Anda sehingga halaman langsung tertata indah secara offline tanpa bundler.
+              </div>
+            </details>
+            <details class="accordion-item">
+              <summary class="accordion-header">
+                <span class="font-medium">Bagaimana cara memakai animasi fadein?</span>
+                <span class="text-xs text-gray-400">&blacktriangledown;</span>
+              </summary>
+              <div class="accordion-body text-sm text-gray-600">
+                Cukup tambahkan class <code>fadein</code> pada elemen HTML apa saja. Tidak ada library JavaScript runtime tambahan.
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="card card-body shadow-sm">
+          <h3 class="text-base font-bold text-gray-900 mb-3">Chat Bubble</h3>
+          <div class="space-y-3">
+            <div class="chat-bubble chat-bubble-start text-xs">
+              Halo! Apakah ycsts sudah mendukung custom select option?
             </div>
-            <div class="form-group">
-              <label class="label label-required">Full Name</label>
-              <input type="text" class="input" placeholder="Alex Morgan">
-            </div>
-            <div class="form-group">
-              <label class="label">Framework Selection</label>
-              <select class="select">
-                <option>ycsts Modern CSS</option>
-                <option>Tailwind CSS</option>
-                <option>Bootstrap 5</option>
-              </select>
-            </div>
-            <div class="flex items-center gap-6">
-              <label class="flex items-center gap-2 cursor-pointer text-sm">
-                <input type="checkbox" class="checkbox" checked> Remember me
-              </label>
-              <label class="flex items-center gap-2 cursor-pointer text-sm">
-                <span class="switch switch-md">
-                  <input type="checkbox" checked>
-                  <span class="toggle-slider"></span>
-                </span>
-                Active Mode
-              </label>
+            <div class="chat-bubble chat-bubble-end text-xs">
+              Sudah! Versi 1.3.0 menyertakan Luxury Custom Select dan Enhanced Form Select lengkap.
             </div>
           </div>
         </div>
 
-        <div>
-          <h3 class="text-xl font-bold mb-4">Interactive Details Accordion & Tabs</h3>
-          <div class="tabs tabs-boxed mb-4">
-            <button class="tab-btn active">Overview</button>
-            <button class="tab-btn">Features</button>
-            <button class="tab-btn">Releases</button>
-          </div>
-          <details class="accordion-item" open>
-            <summary class="accordion-header">
-              <span>Why choose ycsts over other CSS frameworks?</span>
-              <span class="text-xs text-gray-400">&blacktriangledown;</span>
-            </summary>
-            <div class="accordion-body">
-              ycsts combines the granular utility coverage of Tailwind with the out-of-the-box component convenience of Bootstrap, plus signature single-word entrance animations and zero JavaScript dependencies.
-            </div>
-          </details>
-          <details class="accordion-item">
-            <summary class="accordion-header">
-              <span>How do entrance animations work?</span>
-              <span class="text-xs text-gray-400">&blacktriangledown;</span>
-            </summary>
-            <div class="accordion-body">
-              Simply append <code>fadein</code>, <code>fadein-up</code>, <code>fadein-bounce</code>, or <code>fadein-blur</code> to any element to animate it immediately when rendered.
-            </div>
-          </details>
-          <div class="callout callout-info mt-4">
-            <strong>Pro Tip:</strong> Compose animation classes with delay modifiers such as <code>fadein-delay-2</code> to create staggered cascade entrances.
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-12">
-        <h3 class="text-xl font-bold mb-4">Badges & Live Indicators</h3>
-        <div class="flex flex-wrap gap-3 items-center">
-          <span class="badge badge-blue">Blue</span>
-          <span class="badge badge-green">Green</span>
-          <span class="badge badge-red">Red</span>
-          <span class="badge badge-yellow">Yellow</span>
-          <span class="badge badge-purple">Purple</span>
-          <span class="badge badge-indigo">Indigo</span>
-          <span class="badge badge-gray">Gray</span>
-          <span class="badge badge-blue badge-pill">Pill</span>
-          <span class="badge badge-outline">Outline</span>
-          <span class="badge badge-green flex items-center gap-2">
-            <span class="badge-dot-live text-green-500"></span> Live Cluster
-          </span>
-          <span class="badge badge-blue flex items-center gap-2">
-            <span class="badge-dot text-blue-500"></span> Online
-          </span>
-          <div class="relative inline-block">
-            <button class="btn btn-outline btn-sm">Notifications</button>
-            <span class="badge-counter">3</span>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="text-xl font-bold mb-4">Progress & Loading Indicators</h3>
-        <div class="space-y-4 max-w-xl">
-          <div class="progress">
-            <div class="progress-bar" style="width: 65%;"></div>
-          </div>
-          <div class="progress progress-striped progress-animated">
-            <div class="progress-bar progress-bar-green" style="width: 80%;"></div>
-          </div>
-          <div class="flex items-center gap-6">
-            <div class="spinner spinner-sm text-blue-600"></div>
-            <div class="spinner spinner-md text-indigo-600"></div>
-            <div class="spinner spinner-lg text-purple-600"></div>
-            <div class="spinner-grow text-blue-600"></div>
-            <div class="spinner-dots text-indigo-600">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <section id="usage" class="py-20 px-6 bg-gray-50">
+  <section id="quickstart" class="py-20 px-6 bg-white border-t border-gray-200">
     <div class="container mx-auto max-w-4xl text-center">
-      <div class="badge badge-indigo badge-pill mb-2">Getting Started</div>
-      <h2 class="section-title">Start Building with ycsts</h2>
-      <p class="section-subtitle">Initialize a project in seconds with zero configuration.</p>
+      <div class="badge badge-blue badge-pill mb-2">Memulai Cepat</div>
+      <h2 class="section-title">Pasang dan Pakai Sekarang</h2>
+      <p class="section-subtitle">Tersedia lewat npx sekali jalan atau paket npm.</p>
 
-      <div class="mt-8 text-left max-w-2xl mx-auto space-y-4">
-        <div class="card card-body bg-gray-900 text-gray-100 font-mono text-sm overflow-x-auto">
-          <div class="text-gray-400"># Option A: Zero-install starter scaffold</div>
+      <div class="mt-8 text-left max-w-2xl mx-auto space-y-4 font-mono text-sm">
+        <div class="card card-body bg-gray-900 text-gray-100 rounded-xl border border-gray-800 shadow-xl overflow-x-auto">
+          <div class="text-gray-400 mb-1"># Opsi 1: Inisialisasi cepat tanpa install apa-apa</div>
           <div class="text-green-400">npx ycsts-framework init</div>
-          <div class="text-gray-400 mt-3"># Option B: Scoped package starter scaffold</div>
+
+          <div class="text-gray-400 mt-4 mb-1"># Opsi 2: Menggunakan versi scoped resmi</div>
           <div class="text-green-400">npx @yanzyu/ycsts init</div>
-          <div class="text-gray-400 mt-3"># Option C: Global CLI command</div>
-          <div class="text-green-400">npm install -g ycsts-framework</div>
-          <div class="text-green-400">ycsts init</div>
+
+          <div class="text-gray-400 mt-4 mb-1"># Opsi 3: Pasang ke project yang sudah ada</div>
+          <div class="text-green-400">npm install ycsts-framework</div>
+
+          <div class="text-gray-400 mt-4 mb-1"># Opsi 4: Recompile CSS dari source</div>
+          <div class="text-green-400">npx ycsts-framework build</div>
         </div>
       </div>
     </div>
@@ -368,11 +478,171 @@
 
 </main>
 
+<div class="modal-overlay" id="demo-modal">
+  <div class="modal fadein-scale">
+    <div class="modal-header">
+      <h3 class="modal-title">Konfirmasi Aksi ycsts</h3>
+      <button type="button" class="modal-close" id="close-modal-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p class="mb-4">Ini adalah demonstrasi <strong>Popup Modal ycsts</strong>. Menggunakan efek backdrop-filter blur pada overlay dan animasi entrance <code>fadein-scale</code> yang responsif.</p>
+      <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs text-blue-900">
+        Status: Seluruh komponen modal, select kustom, dan animasi telah teruji 100% aktif.
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline btn-sm" id="cancel-modal-btn">Batal</button>
+      <button type="button" class="btn btn-primary btn-sm" id="confirm-modal-btn">Lanjutkan</button>
+    </div>
+  </div>
+</div>
+
 <footer class="py-8 px-6 bg-white border-t border-gray-200 text-center text-sm text-gray-500">
   <div class="container mx-auto">
-    ycsts CSS Framework &bull; Released under the MIT License &bull; Built with love.
+    ycsts CSS Framework &bull; Versi 1.3.0 &bull; Dibuat dengan dedikasi untuk performa dan keindahan.
   </div>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var heroCopyBtn = document.getElementById("hero-copy-btn");
+  var heroCmd = document.getElementById("hero-cmd");
+  if (heroCopyBtn && heroCmd) {
+    heroCopyBtn.addEventListener("click", function () {
+      navigator.clipboard.writeText(heroCmd.textContent.trim()).then(function () {
+        heroCopyBtn.textContent = "Disalin!";
+        setTimeout(function () {
+          heroCopyBtn.textContent = "Salin";
+        }, 1800);
+      });
+    });
+  }
+
+  function setupCustomSelect(triggerId, menuId, containerId, displayId, resultTagId, searchId) {
+    var trigger = document.getElementById(triggerId);
+    var menu = document.getElementById(menuId);
+    var container = document.getElementById(containerId);
+    var display = document.getElementById(displayId);
+    var resultTag = document.getElementById(resultTagId);
+    var search = document.getElementById(searchId);
+    if (!trigger || !menu || !container) return;
+
+    trigger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var isOpen = menu.style.display === "flex";
+      menu.style.display = isOpen ? "none" : "flex";
+      menu.style.opacity = isOpen ? "0" : "1";
+      menu.style.transform = isOpen ? "translateY(-8px) scale(0.98)" : "translateY(0) scale(1)";
+      if (!isOpen && search) {
+        setTimeout(function () { search.focus(); }, 50);
+      }
+    });
+
+    var options = container.querySelectorAll(".custom-select-option");
+    options.forEach(function (opt) {
+      opt.addEventListener("click", function (e) {
+        e.stopPropagation();
+        options.forEach(function (o) { o.classList.remove("is-selected"); });
+        opt.classList.add("is-selected");
+
+        var title = opt.getAttribute("data-title") || opt.querySelector(".option-title").textContent;
+        var color = opt.getAttribute("data-color") || "bg-blue-500";
+
+        if (display) {
+          display.innerHTML = '<span class="w-2.5 h-2.5 rounded-full ' + color + ' shrink-0"></span><span>' + title + '</span>';
+        }
+        if (resultTag) {
+          resultTag.textContent = title;
+        }
+
+        menu.style.display = "none";
+        menu.style.opacity = "0";
+        menu.style.transform = "translateY(-8px) scale(0.98)";
+      });
+    });
+
+    if (search) {
+      search.addEventListener("input", function () {
+        var query = search.value.toLowerCase();
+        options.forEach(function (opt) {
+          var title = (opt.getAttribute("data-title") || "").toLowerCase();
+          var desc = opt.querySelector(".option-desc") ? opt.querySelector(".option-desc").textContent.toLowerCase() : "";
+          if (title.indexOf(query) !== -1 || desc.indexOf(query) !== -1) {
+            opt.style.display = "flex";
+          } else {
+            opt.style.display = "none";
+          }
+        });
+      });
+    }
+
+    document.addEventListener("click", function () {
+      menu.style.display = "none";
+      menu.style.opacity = "0";
+      menu.style.transform = "translateY(-8px) scale(0.98)";
+    });
+  }
+
+  setupCustomSelect("luxury-select-btn", "luxury-select-dropdown", "luxury-options-container", "luxury-select-display", "luxury-result-tag", "luxury-search-input");
+  setupCustomSelect("dark-select-btn", "dark-select-dropdown", "dark-options-container", "dark-select-display", "dark-result-tag", "dark-search-input");
+
+  var nativeSelect = document.getElementById("native-select-demo");
+  var nativeResult = document.getElementById("native-result-tag");
+  if (nativeSelect && nativeResult) {
+    nativeSelect.addEventListener("change", function () {
+      nativeResult.textContent = nativeSelect.options[nativeSelect.selectedIndex].text.split(" - ")[0];
+    });
+  }
+
+  var modal = document.getElementById("demo-modal");
+  var openModalBtn = document.getElementById("open-modal-btn");
+  var heroModalBtn = document.getElementById("trigger-hero-modal");
+  var closeModalBtn = document.getElementById("close-modal-btn");
+  var cancelModalBtn = document.getElementById("cancel-modal-btn");
+  var confirmModalBtn = document.getElementById("confirm-modal-btn");
+
+  function openModal() {
+    if (modal) modal.classList.add("is-active");
+  }
+  function closeModal() {
+    if (modal) modal.classList.remove("is-active");
+  }
+
+  if (openModalBtn) openModalBtn.addEventListener("click", openModal);
+  if (heroModalBtn) heroModalBtn.addEventListener("click", openModal);
+  if (closeModalBtn) closeModalBtn.addEventListener("click", closeModal);
+  if (cancelModalBtn) cancelModalBtn.addEventListener("click", closeModal);
+  if (confirmModalBtn) confirmModalBtn.addEventListener("click", closeModal);
+
+  if (modal) {
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  var animTriggers = document.querySelectorAll(".anim-trigger");
+  var animTarget = document.getElementById("animation-target");
+  var animTitle = document.getElementById("animation-title");
+  var animSubtitle = document.getElementById("animation-subtitle");
+
+  animTriggers.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      animTriggers.forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+
+      var animClass = btn.getAttribute("data-anim");
+      var desc = btn.getAttribute("data-desc");
+
+      animTitle.textContent = "." + animClass;
+      animSubtitle.textContent = desc;
+
+      animTarget.className = "p-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl shadow-lg text-center";
+      void animTarget.offsetWidth;
+      animTarget.classList.add(animClass);
+    });
+  });
+});
+</script>
 
 </body>
 </html>
