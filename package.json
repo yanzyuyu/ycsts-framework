@@ -1,6 +1,6 @@
 {
   "name": "@yanzyu/ycsts",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Utility-first CSS framework. Fadein in 1 word.",
   "main": "dist/ycsts.css",
   "style": "dist/ycsts.min.css",
