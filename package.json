@@ -1,10 +1,10 @@
 {
-  "name": "ycsts",
-  "version": "1.0.0",
+  "name": "@yanzyu/ycsts",
+  "version": "1.0.1",
   "description": "Utility-first CSS framework. Fadein in 1 word.",
   "main": "dist/ycsts.css",
   "bin": {
-    "ycsts": "./bin/ycsts.js"
+    "ycsts": "bin/ycsts.js"
   },
   "scripts": {
     "build": "node scripts/build.js",
