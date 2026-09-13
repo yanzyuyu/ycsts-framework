@@ -44,9 +44,13 @@ npx ycsts-framework init --force
 
 ### Option 2: Local Project Installation via npm
 
+To have the `node_modules/` directory in your project so you can link `<link rel="stylesheet" href="node_modules/ycsts-framework/dist/ycsts.min.css">` or use a bundler (Vite, Webpack, Parcel):
+
 ```bash
 npm install ycsts-framework
 ```
+
+> Note: Running `npx ycsts-framework init` produces a standalone `ycsts.min.css` directly in your project root with zero dependencies, without creating a `node_modules/` folder. To generate `node_modules/ycsts-framework/`, run `npm install ycsts-framework`.
 
 Import into your main stylesheet:
 
@@ -63,7 +67,7 @@ Or link directly in HTML:
 ### Option 3: Direct CDN Link
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ycsts-framework@1.3.0/dist/ycsts.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ycsts-framework@1.4.0/dist/ycsts.min.css">
 ```
 
 ---
@@ -299,10 +303,88 @@ Add fadein to any element for an immediate entrance transition:
 
 ---
 
+## Laravel Integration (Vite & Blade)
+
+YCSTS provides first-class support for Laravel 9, 10, and 11 with Vite Hot Module Replacement (HMR).
+
+### Fast Configuration via CLI
+
+Inside your Laravel project root:
+
+```bash
+npx ycsts-framework laravel
+```
+
+This checks your Laravel directory structure, adds the `@import` statement to `resources/css/app.css`, and creates `resources/views/ycsts-demo.blade.php`.
+
+### Manual Configuration
+
+1. Install YCSTS:
+   ```bash
+   npm install ycsts-framework
+   ```
+
+2. Add to `resources/css/app.css`:
+   ```css
+   @import "ycsts-framework/dist/ycsts.min.css";
+   ```
+
+3. In Blade templates (`resources/views/...`):
+   ```html
+   <head>
+       @vite(['resources/css/app.css', 'resources/js/app.js'])
+   </head>
+   ```
+
+4. Run the Vite development server:
+   ```bash
+   npm run dev
+   ```
+
+All classes, animations, and components are live-reloaded as you edit.
+
+---
+
+## Visual Studio Code Extension
+
+YCSTS includes an official VS Code snippet extension providing rapid autocomplete for all utilities, animations, and components across HTML, Blade, PHP, Vue, React, and CSS.
+
+### Installation
+
+Install via the VS Code CLI:
+
+```bash
+code --install-extension vscode-extension/ycsts-snippets-1.0.0.vsix
+```
+
+Or install from the Extensions panel: `Ctrl+Shift+P` -> `Extensions: Install from VSIX...` -> select `vscode-extension/ycsts-snippets-1.0.0.vsix`.
+
+### Popular Snippets
+
+| Prefix | Output | Description |
+|---|---|---|
+| `yc-fadein` | `<div class="fadein">...</div>` | 0.4s smooth fade + slide up |
+| `yc-fadein-up` | `<div class="fadein-up">...</div>` | Upward entrance |
+| `yc-fadein-scale` | `<div class="fadein-scale">...</div>` | Zoom/scale entrance |
+| `yc-custom-select` | Luxury custom dropdown | Select with search, badges, checkmarks |
+| `yc-select-custom` | `<select class="select-custom">...` | Enhanced native select |
+| `yc-scrollbar-glow` | `<div class="scrollbar-glow">...</div>` | Glowing gradient scrollbar |
+| `yc-modal` | Complete modal dialog | Modal with backdrop, header, body, footer |
+| `yc-stat-card` | KPI analytics metric card | Metric card with percentage trend indicator |
+| `yc-btn-primary` | `<button class="btn btn-primary">...` | Primary styled button |
+| `yc-btn-gradient` | `<button class="btn btn-gradient">...` | Radiant gradient button |
+| `yc-toggle` | `<input type="checkbox" class="toggle">` | Accessible switch toggle |
+| `yc-laravel-vite` | `@vite(['resources/css/app.css', ...])` | Laravel asset directive |
+| `yc-blade-starter` | Full starter Blade layout | Ready-to-use template with Vite & YCSTS |
+| `yc-import` | `@import "ycsts-framework/dist/ycsts.min.css";` | CSS stylesheet import |
+
+---
+
 ## CLI Usage
 
 ```bash
 npx ycsts-framework init       # Scaffold starter template, config, and ycsts.min.css
+npx ycsts-framework laravel    # Configure YCSTS in a Laravel project
 npx ycsts-framework build      # Compile CSS from source into dist/
 npx ycsts-framework --version  # Print version
 npx ycsts-framework --help     # Command line help

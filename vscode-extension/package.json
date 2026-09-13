@@ -1,0 +1,62 @@
+{
+  "name": "ycsts-snippets",
+  "displayName": "YCSTS Framework Snippets",
+  "description": "Complete code snippets for YCSTS CSS Framework. Single-word animations, luxury components, and utilities.",
+  "version": "1.0.0",
+  "publisher": "yanzyuyu",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "ycsts",
+    "css",
+    "fadein",
+    "tailwind",
+    "snippets",
+    "blade",
+    "laravel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanzyuyu/ycsts-framework.git"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "blade",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "svelte",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
+}
