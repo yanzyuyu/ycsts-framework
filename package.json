@@ -1,0 +1,37 @@
+{
+  "name": "ycsts",
+  "version": "1.0.0",
+  "description": "Utility-first CSS framework. Fadein in 1 word.",
+  "main": "dist/ycsts.css",
+  "bin": {
+    "ycsts": "./bin/ycsts.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "postcss src/ycsts.css -o dist/ycsts.css --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "utility",
+    "tailwind",
+    "fadein",
+    "ycsts"
+  ],
+  "author": "yanzyuyu",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "bin/",
+    "templates/",
+    "src/"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.6.0",
+    "cssnano": "^9.0.4",
+    "postcss": "^8.5.28",
+    "postcss-cli": "^12.0.0",
+    "postcss-import": "^17.0.0"
+  }
+}

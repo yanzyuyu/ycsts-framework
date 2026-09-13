@@ -1,0 +1,97 @@
+@keyframes ycsts-fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ycsts-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ycsts-ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes ycsts-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes ycsts-bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.fadein {
+  animation: ycsts-fadein 0.4s ease-out both;
+}
+
+.fadein-fast {
+  animation: ycsts-fadein 0.2s ease-out both;
+}
+
+.fadein-slow {
+  animation: ycsts-fadein 0.8s ease-out both;
+}
+
+.fadein-delay-1 {
+  animation: ycsts-fadein 0.4s ease-out 100ms both;
+}
+
+.fadein-delay-2 {
+  animation: ycsts-fadein 0.4s ease-out 200ms both;
+}
+
+.fadein-delay-3 {
+  animation: ycsts-fadein 0.4s ease-out 300ms both;
+}
+
+.fadein-delay-4 {
+  animation: ycsts-fadein 0.4s ease-out 500ms both;
+}
+
+.animate-spin {
+  animation: ycsts-spin 1s linear infinite;
+}
+
+.animate-ping {
+  animation: ycsts-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-pulse {
+  animation: ycsts-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: ycsts-bounce 1s infinite;
+}
+
+.animate-none {
+  animation: none;
+}
