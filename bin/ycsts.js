@@ -11,10 +11,12 @@ const HELP = `
 ycsts ${pkg.version}
 
 Usage:
-  npx @yanzyu/ycsts init [--force]   Copy starter config, template, and CSS bundle
-  npx @yanzyu/ycsts build            Build CSS from source into dist/
-  npx @yanzyu/ycsts --version        Print version
-  npx @yanzyu/ycsts --help           Show this message
+  npx ycsts-framework init [--force]       Initialize starter project (unscoped)
+  npx @yanzyu/ycsts init [--force]         Initialize starter project (scoped)
+  ycsts init [--force]                     Initialize starter project (local or global)
+  ycsts build [-i <input>] [-o <output>]   Build and minify CSS bundle
+  ycsts --version                          Print version
+  ycsts --help                             Show this message
 `;
 
 if (cmd === "--version" || cmd === "-v") {
@@ -68,10 +70,63 @@ if (cmd === "init") {
 
 if (cmd === "build") {
   const frameworkRoot = path.join(__dirname, "..");
-  const buildScript = path.join(frameworkRoot, "scripts", "build.js");
+  const cwd = process.cwd();
 
+  let inputArg = null;
+  let outputArg = null;
+  for (let i = 1; i < args.length; i++) {
+    if (args[i] === "-i" || args[i] === "--input") {
+      inputArg = args[i + 1];
+      i++;
+    } else if (args[i] === "-o" || args[i] === "--output") {
+      outputArg = args[i + 1];
+      i++;
+    }
+  }
+
+  let srcFile;
+  if (inputArg) {
+    srcFile = path.resolve(cwd, inputArg);
+  } else if (fs.existsSync(path.join(cwd, "src", "ycsts.css"))) {
+    srcFile = path.join(cwd, "src", "ycsts.css");
+  } else if (fs.existsSync(path.join(cwd, "src", "style.css"))) {
+    srcFile = path.join(cwd, "src", "style.css");
+  } else {
+    srcFile = path.join(frameworkRoot, "src", "ycsts.css");
+  }
+
+  let outFullFile;
+  let outMinFile;
+  if (outputArg) {
+    outFullFile = path.resolve(cwd, outputArg);
+    if (outFullFile.endsWith(".min.css")) {
+      outMinFile = outFullFile;
+      outFullFile = outFullFile.replace(/\.min\.css$/, ".css");
+    } else if (outFullFile.endsWith(".css")) {
+      outMinFile = outFullFile.replace(/\.css$/, ".min.css");
+    } else {
+      outMinFile = outFullFile + ".min.css";
+      outFullFile = outFullFile + ".css";
+    }
+  } else if (cwd === frameworkRoot) {
+    outFullFile = path.join(frameworkRoot, "dist", "ycsts.css");
+    outMinFile = path.join(frameworkRoot, "dist", "ycsts.min.css");
+  } else {
+    outFullFile = path.join(cwd, "dist", "ycsts.css");
+    outMinFile = path.join(cwd, "dist", "ycsts.min.css");
+  }
+
+  const buildScript = path.join(frameworkRoot, "scripts", "build.js");
   try {
-    require(buildScript);
+    const buildCSS = require(buildScript);
+    buildCSS({ src: srcFile, outFull: outFullFile, outMin: outMinFile })
+      .then(() => {
+        process.exit(0);
+      })
+      .catch((err) => {
+        process.stderr.write("Build failed: " + err.message + "\n");
+        process.exit(1);
+      });
   } catch (e) {
     process.stderr.write("Build failed: " + e.message + "\n");
     process.exit(1);
@@ -79,5 +134,5 @@ if (cmd === "build") {
   return;
 }
 
-process.stderr.write(`Unknown command: ${cmd}\nRun npx @yanzyu/ycsts --help for usage.\n`);
+process.stderr.write(`Unknown command: ${cmd}\nRun ycsts --help for usage.\n`);
 process.exit(1);

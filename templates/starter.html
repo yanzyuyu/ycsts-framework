@@ -12,7 +12,7 @@
   <div class="container mx-auto px-6 py-2 flex items-center justify-between">
     <div class="flex items-center gap-3 fadein">
       <span class="text-2xl font-black text-blue-600 tracking-tight">ycsts</span>
-      <span class="badge badge-blue badge-pill">v1.1.0</span>
+      <span class="badge badge-blue badge-pill">v1.2.0</span>
     </div>
     <nav class="flex items-center gap-6">
       <a href="#animations" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-150">Animations</a>
@@ -38,8 +38,8 @@
         A complete modern stylesheet providing an exhaustive utility engine, rich animation suite with signature <code class="font-mono text-sm bg-blue-100 text-blue-800 px-2 py-0.5 rounded">fadein</code>, and polished production-ready components.
       </p>
       <div class="mt-10 flex flex-wrap items-center justify-center gap-4 fadein fadein-delay-3">
-        <a href="#usage" class="btn btn-primary btn-lg btn-glow">Get Started</a>
-        <a href="#animations" class="btn btn-outline btn-lg">Explore Animations</a>
+        <a href="#usage" class="btn btn-gradient-primary btn-lg btn-glow hover-scale">Get Started</a>
+        <a href="#animations" class="btn btn-outline btn-lg hover-float">Explore Animations</a>
       </div>
     </div>
   </section>
@@ -47,309 +47,330 @@
   <section id="stats" class="py-12 px-6 bg-white border-y border-gray-100">
     <div class="container mx-auto max-w-5xl">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div class="stat-card fadein fadein-delay-1">
+        <div class="stat-card fadein fadein-delay-1 hover-float">
           <div class="stat-title">Utility Classes</div>
           <div class="stat-value text-blue-600">3,000+</div>
           <div class="stat-desc">Full Tailwind-level coverage</div>
         </div>
-        <div class="stat-card fadein fadein-delay-2">
+        <div class="stat-card fadein fadein-delay-2 hover-float">
           <div class="stat-title">Animation Library</div>
-          <div class="stat-value text-indigo-600">25+</div>
+          <div class="stat-value text-indigo-600">45+</div>
           <div class="stat-desc">Signature fadein suite + modern UI</div>
         </div>
-        <div class="stat-card fadein fadein-delay-3">
+        <div class="stat-card fadein fadein-delay-3 hover-float">
           <div class="stat-title">Components</div>
-          <div class="stat-value text-emerald-600">30+</div>
+          <div class="stat-value text-emerald-600">40+</div>
           <div class="stat-desc">Pre-built interactive elements</div>
         </div>
-        <div class="stat-card fadein fadein-delay-4">
-          <div class="stat-title">Setup Speed</div>
-          <div class="stat-value text-amber-600">0s</div>
-          <div class="stat-desc">Drop-in CSS or instant npx init</div>
+        <div class="stat-card fadein fadein-delay-4 hover-float">
+          <div class="stat-title">Runtime JavaScript</div>
+          <div class="stat-value text-purple-600">0 KB</div>
+          <div class="stat-desc">100% Pure CSS implementation</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="animations" class="py-20 px-6 bg-gray-50">
+  <section id="animations" class="py-20 px-6">
     <div class="container mx-auto max-w-5xl">
-      <div class="section-header fadein">
-        <h2 class="section-title">Signature Animation Suite</h2>
-        <p class="section-subtitle">Single-word classes for instant fluid motion. No keyframe configuration needed.</p>
+      <div class="section-header">
+        <div class="badge badge-blue badge-pill mb-2">Motion Design</div>
+        <h2 class="section-title">Signature Entrance Animations</h2>
+        <p class="section-subtitle">Apply smooth, hardware-accelerated animations using single utility classes. No JavaScript required.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-
-        <div class="card card-hover card-body fadein">
-          <div class="flex items-center justify-between mb-4">
-            <span class="badge badge-blue">fadein</span>
-            <span class="text-xs text-gray-500">Default</span>
-          </div>
-          <div class="p-6 bg-blue-50 border border-blue-100 rounded-lg text-center font-bold text-blue-700 fadein">
-            Fades in from bottom
-          </div>
-          <p class="text-xs text-gray-500 mt-4">Natural entrance with cubic-bezier smoothing.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div class="card card-body text-center fadein hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein</div>
+          <div class="text-2xl mb-1">&uarr;</div>
+          <div class="text-sm font-semibold">Standard</div>
         </div>
-
-        <div class="card card-hover card-body fadein fadein-delay-1">
-          <div class="flex items-center justify-between mb-4">
-            <span class="badge badge-indigo">fadein-scale</span>
-            <span class="text-xs text-gray-500">Scale</span>
-          </div>
-          <div class="p-6 bg-indigo-50 border border-indigo-100 rounded-lg text-center font-bold text-indigo-700 fadein-scale">
-            Scales in smoothly
-          </div>
-          <p class="text-xs text-gray-500 mt-4">Scales from 0.92 to 1.0 with opacity fade.</p>
+        <div class="card card-body text-center fadein-up hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-up</div>
+          <div class="text-2xl mb-1">&uarr;&uarr;</div>
+          <div class="text-sm font-semibold">From Below</div>
         </div>
-
-        <div class="card card-hover card-body fadein fadein-delay-2">
-          <div class="flex items-center justify-between mb-4">
-            <span class="badge badge-purple">fadein-blur</span>
-            <span class="text-xs text-gray-500">Cinematic</span>
-          </div>
-          <div class="p-6 bg-purple-50 border border-purple-100 rounded-lg text-center font-bold text-purple-700 fadein-blur">
-            Cinematic blur transition
-          </div>
-          <p class="text-xs text-gray-500 mt-4">Transitions from 10px blur to crystal clarity.</p>
+        <div class="card card-body text-center fadein-scale hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-scale</div>
+          <div class="text-2xl mb-1">&oplus;</div>
+          <div class="text-sm font-semibold">Scale In</div>
         </div>
-
-        <div class="card card-hover card-body fadein fadein-delay-3">
-          <div class="flex items-center justify-between mb-4">
-            <span class="badge badge-green">fadein-left</span>
-            <span class="text-xs text-gray-500">Directional</span>
-          </div>
-          <div class="p-6 bg-green-50 border border-green-100 rounded-lg text-center font-bold text-green-700 fadein-left">
-            Slides in from right
-          </div>
-          <p class="text-xs text-gray-500 mt-4">Also supports fadein-right, fadein-up, fadein-down.</p>
+        <div class="card card-body text-center fadein-blur hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-blur</div>
+          <div class="text-2xl mb-1">&approx;</div>
+          <div class="text-sm font-semibold">Lens Focus</div>
         </div>
-
-        <div class="card card-hover card-body fadein fadein-delay-4">
-          <div class="flex items-center justify-between mb-4">
-            <span class="badge badge-orange">animate-float</span>
-            <span class="text-xs text-gray-500">Loop</span>
-          </div>
-          <div class="p-6 bg-orange-50 border border-orange-100 rounded-lg text-center font-bold text-orange-700 animate-float">
-            Gentle float motion
-          </div>
-          <p class="text-xs text-gray-500 mt-4">Continuous smooth 3-second floating loop.</p>
+        <div class="card card-body text-center fadein-bounce hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-bounce</div>
+          <div class="text-2xl mb-1">&cudarrr;</div>
+          <div class="text-sm font-semibold">Playful Bounce</div>
         </div>
-
-        <div class="card card-hover card-body fadein fadein-delay-5">
-          <div class="flex items-center justify-between mb-4">
-            <span class="badge badge-pink">animate-pulse-glow</span>
-            <span class="text-xs text-gray-500">Ambient</span>
-          </div>
-          <div class="p-6 bg-pink-50 border border-pink-200 rounded-lg text-center font-bold text-pink-700 animate-pulse-glow">
-            Pulsing aura glow
-          </div>
-          <p class="text-xs text-gray-500 mt-4">Subtle dynamic box-shadow breathing effect.</p>
+        <div class="card card-body text-center fadein-glow hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-glow</div>
+          <div class="text-2xl mb-1">&sun;</div>
+          <div class="text-sm font-semibold">Illuminating Glow</div>
         </div>
+        <div class="card card-body text-center fadein-expand hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-expand</div>
+          <div class="text-2xl mb-1">&harr;</div>
+          <div class="text-sm font-semibold">Smooth Expand</div>
+        </div>
+        <div class="card card-body text-center fadein-pop hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-pop</div>
+          <div class="text-2xl mb-1">&starf;</div>
+          <div class="text-sm font-semibold">Energetic Pop</div>
+        </div>
+        <div class="card card-body text-center fadein-swing hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-swing</div>
+          <div class="text-2xl mb-1">&#8635;</div>
+          <div class="text-sm font-semibold">3D Swing</div>
+        </div>
+        <div class="card card-body text-center fadein-elastic hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-elastic</div>
+          <div class="text-2xl mb-1">&curren;</div>
+          <div class="text-sm font-semibold">Elastic Spring</div>
+        </div>
+        <div class="card card-body text-center fadein-tilt hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-tilt</div>
+          <div class="text-2xl mb-1">&#9022;</div>
+          <div class="text-sm font-semibold">Perspective Tilt</div>
+        </div>
+        <div class="card card-body text-center fadein-flip-x hover-scale">
+          <div class="text-xs font-mono text-blue-600 mb-2">.fadein-flip-x</div>
+          <div class="text-2xl mb-1">&circlearrowright;</div>
+          <div class="text-sm font-semibold">3D Card Flip</div>
+        </div>
+      </div>
 
+      <div class="section-header mt-16">
+        <div class="badge badge-purple badge-pill mb-2">Infinite & Continuous</div>
+        <h2 class="section-title">Modern Ambient Motion</h2>
+        <p class="section-subtitle">Engaging ambient motion loops for hero cards, status indicators, and badges.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card card-glass card-body text-center animate-float">
+          <div class="text-xs font-mono text-indigo-600 mb-2">.animate-float</div>
+          <div class="text-lg font-bold">Floating Surface</div>
+          <p class="text-sm text-gray-500 mt-2">Smooth sinusoidal hover motion ideal for hero cards.</p>
+        </div>
+        <div class="card card-body text-center animate-pulse-glow">
+          <div class="text-xs font-mono text-blue-600 mb-2">.animate-pulse-glow</div>
+          <div class="text-lg font-bold">Neon Pulse Aura</div>
+          <p class="text-sm text-gray-500 mt-2">Breathing box-shadow aura that draws user focus.</p>
+        </div>
+        <div class="card card-body text-center animate-shimmer overflow-hidden">
+          <div class="text-xs font-mono text-emerald-600 mb-2">.animate-shimmer</div>
+          <div class="text-lg font-bold">Skeleton Shimmer</div>
+          <p class="text-sm text-gray-500 mt-2">Liquid metallic shine sweep for placeholders and loading states.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="components" class="py-20 px-6 bg-white border-t border-gray-100">
+  <section id="components" class="py-20 px-6 bg-white border-y border-gray-100">
     <div class="container mx-auto max-w-5xl">
-      <div class="section-header fadein">
-        <h2 class="section-title">Component Showcase</h2>
-        <p class="section-subtitle">Crafted with precision, zero-dependency HTML elements that look stunning out of the box.</p>
+      <div class="section-header">
+        <div class="badge badge-emerald badge-pill mb-2">Component Gallery</div>
+        <h2 class="section-title">Polished Modern Elements</h2>
+        <p class="section-subtitle">Comprehensive set of pure-CSS components designed for modern dashboards and SaaS products.</p>
       </div>
 
-      <div class="space-y-12 mt-12">
+      <div class="mb-12">
+        <h3 class="text-xl font-bold mb-4">Button System</h3>
+        <div class="flex flex-wrap gap-3 items-center mb-4">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-danger">Danger</button>
+          <button class="btn btn-warning">Warning</button>
+          <button class="btn btn-info">Info</button>
+          <button class="btn btn-dark">Dark</button>
+          <button class="btn btn-light">Light</button>
+          <button class="btn btn-outline">Outline</button>
+        </div>
+        <div class="flex flex-wrap gap-3 items-center mb-4">
+          <button class="btn btn-soft-primary">Soft Blue</button>
+          <button class="btn btn-soft-success">Soft Green</button>
+          <button class="btn btn-soft-danger">Soft Red</button>
+          <button class="btn btn-soft-warning">Soft Amber</button>
+          <button class="btn btn-soft-info">Soft Cyan</button>
+          <button class="btn btn-soft-dark">Soft Dark</button>
+        </div>
+        <div class="flex flex-wrap gap-3 items-center">
+          <button class="btn btn-gradient-primary btn-glow">Gradient Blue</button>
+          <button class="btn btn-gradient-indigo btn-glow-indigo">Gradient Indigo</button>
+          <button class="btn btn-gradient-rose btn-glow-rose">Gradient Rose</button>
+          <button class="btn btn-gradient-sunset">Sunset Glow</button>
+          <button class="btn btn-gradient-emerald btn-glow-emerald">Gradient Emerald</button>
+          <button class="btn btn-gradient-cyber">Cyber Glow</button>
+          <button class="btn btn-primary btn-loading">Loading</button>
+          <button class="btn btn-primary btn-pill">Pill Shape</button>
+        </div>
+      </div>
 
-        <div class="fadein">
-          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Buttons</h3>
-          <div class="flex flex-wrap items-center gap-3">
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-secondary">Secondary</button>
-            <button class="btn btn-success">Success</button>
-            <button class="btn btn-danger">Danger</button>
-            <button class="btn btn-warning">Warning</button>
-            <button class="btn btn-info">Info</button>
-            <button class="btn btn-dark">Dark</button>
-            <button class="btn btn-primary btn-glow">Glow</button>
-            <button class="btn btn-outline-primary">Outline</button>
-            <button class="btn btn-primary btn-pill">Pill</button>
-            <div class="btn-group">
-              <button class="btn btn-outline">Left</button>
-              <button class="btn btn-outline">Middle</button>
-              <button class="btn btn-outline">Right</button>
-            </div>
+      <div class="mb-12">
+        <h3 class="text-xl font-bold mb-4">Glassmorphism & Surfaces</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 bg-gradient-to-br from-blue-600 to-indigo-900 rounded-2xl">
+          <div class="card card-glass card-body hover-float">
+            <span class="badge badge-blue badge-pill mb-2">Glass Light</span>
+            <div class="text-lg font-bold text-gray-900">Frosted Glass</div>
+            <p class="text-sm text-gray-700 mt-2">Backdrop-filtered blurred glass surface with soft border highlights.</p>
+          </div>
+          <div class="card card-glass-dark card-body hover-float">
+            <span class="badge badge-purple badge-pill mb-2">Glass Dark</span>
+            <div class="text-lg font-bold text-white">Dark Glass Surface</div>
+            <p class="text-sm text-gray-300 mt-2">High contrast frosted glass for dark backgrounds and night modes.</p>
+          </div>
+          <div class="card card-glass-bordered card-body hover-float">
+            <span class="badge badge-emerald badge-pill mb-2">Glass Highlight</span>
+            <div class="text-lg font-bold text-gray-900">Accent Border Glass</div>
+            <p class="text-sm text-gray-700 mt-2">Enhanced border tint reflecting ambient illumination.</p>
           </div>
         </div>
+      </div>
 
-        <div class="fadein">
-          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Badges & Live Indicators</h3>
-          <div class="flex flex-wrap items-center gap-3">
-            <span class="badge badge-blue">Blue</span>
-            <span class="badge badge-green">Green</span>
-            <span class="badge badge-red">Red</span>
-            <span class="badge badge-yellow">Yellow</span>
-            <span class="badge badge-purple">Purple</span>
-            <span class="badge badge-emerald">Emerald</span>
-            <span class="badge badge-cyan">Cyan</span>
-            <span class="badge badge-pink">Pink</span>
-            <span class="badge badge-green badge-pill">
-              <span class="badge-dot-live"></span>
-              Live System
-            </span>
-          </div>
-        </div>
-
-        <div class="fadein">
-          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Cards & Glassmorphism</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="card card-hover">
-              <div class="card-header">
-                <span class="card-title">Standard Card</span>
-              </div>
-              <div class="card-body">
-                Clean borders with soft elevation on hover.
-              </div>
-              <div class="card-footer">
-                <button class="btn btn-primary btn-sm">Action</button>
-              </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Form Controls & Floating Labels</h3>
+          <div class="card card-body space-y-4">
+            <div class="form-floating">
+              <input type="text" class="input" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
             </div>
-
-            <div class="card card-glass card-hover">
-              <div class="card-header">
-                <span class="card-title">Glass Card</span>
-              </div>
-              <div class="card-body">
-                Frosted glass effect with backdrop blur and translucency.
-              </div>
-              <div class="card-footer">
-                <button class="btn btn-secondary btn-sm">Explore</button>
-              </div>
-            </div>
-
-            <div class="card card-hover bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
-              <div class="card-header border-blue-400">
-                <span class="card-title text-white">Gradient Card</span>
-              </div>
-              <div class="card-body text-blue-100">
-                Rich gradient backgrounds with crisp text rendering.
-              </div>
-              <div class="card-footer border-blue-400 bg-transparent">
-                <button class="btn btn-light btn-sm">Read More</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="fadein">
-          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Form Controls</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="form-group">
-              <label class="label label-required">Email Address</label>
-              <input type="email" class="input" placeholder="you@domain.com">
-              <p class="form-hint">We will never share your email.</p>
+              <label class="label label-required">Full Name</label>
+              <input type="text" class="input" placeholder="Alex Morgan">
             </div>
-
             <div class="form-group">
-              <label class="label">Input Group</label>
-              <div class="input-group">
-                <span class="input-group-text">https://</span>
-                <input type="text" class="input" placeholder="yoursite.com">
-              </div>
+              <label class="label">Framework Selection</label>
+              <select class="select">
+                <option>ycsts Modern CSS</option>
+                <option>Tailwind CSS</option>
+                <option>Bootstrap 5</option>
+              </select>
             </div>
-
-            <div class="form-group">
-              <label class="label">Interactive Toggle</label>
-              <div class="flex items-center gap-3 mt-2">
-                <label class="toggle">
+            <div class="flex items-center gap-6">
+              <label class="flex items-center gap-2 cursor-pointer text-sm">
+                <input type="checkbox" class="checkbox" checked> Remember me
+              </label>
+              <label class="flex items-center gap-2 cursor-pointer text-sm">
+                <span class="switch switch-md">
                   <input type="checkbox" checked>
                   <span class="toggle-slider"></span>
-                </label>
-                <span class="text-sm text-gray-700 font-medium">Auto-renew subscription</span>
-              </div>
+                </span>
+                Active Mode
+              </label>
             </div>
           </div>
         </div>
 
-        <div class="fadein">
-          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Alerts</h3>
-          <div class="space-y-3">
-            <div class="alert alert-info">Information notice: New features are now available in version 1.1.0.</div>
-            <div class="alert alert-success">Operation successful: All packages built and validated without errors.</div>
-            <div class="alert alert-warning">Warning notice: Please verify your production environment settings.</div>
-            <div class="alert alert-error">Error alert: Invalid API token received from target host.</div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Interactive Details Accordion & Tabs</h3>
+          <div class="tabs tabs-boxed mb-4">
+            <button class="tab-btn active">Overview</button>
+            <button class="tab-btn">Features</button>
+            <button class="tab-btn">Releases</button>
+          </div>
+          <details class="accordion-item" open>
+            <summary class="accordion-header">
+              <span>Why choose ycsts over other CSS frameworks?</span>
+              <span class="text-xs text-gray-400">&blacktriangledown;</span>
+            </summary>
+            <div class="accordion-body">
+              ycsts combines the granular utility coverage of Tailwind with the out-of-the-box component convenience of Bootstrap, plus signature single-word entrance animations and zero JavaScript dependencies.
+            </div>
+          </details>
+          <details class="accordion-item">
+            <summary class="accordion-header">
+              <span>How do entrance animations work?</span>
+              <span class="text-xs text-gray-400">&blacktriangledown;</span>
+            </summary>
+            <div class="accordion-body">
+              Simply append <code>fadein</code>, <code>fadein-up</code>, <code>fadein-bounce</code>, or <code>fadein-blur</code> to any element to animate it immediately when rendered.
+            </div>
+          </details>
+          <div class="callout callout-info mt-4">
+            <strong>Pro Tip:</strong> Compose animation classes with delay modifiers such as <code>fadein-delay-2</code> to create staggered cascade entrances.
           </div>
         </div>
+      </div>
 
-        <div class="fadein">
-          <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Pure CSS Accordion</h3>
-          <div class="space-y-2 max-w-2xl">
-            <details class="accordion-item" open>
-              <summary class="accordion-header">
-                <span>How does ycsts compare to Tailwind CSS?</span>
-              </summary>
-              <div class="accordion-body">
-                ycsts combines comprehensive utility classes with pre-built component classes and signature animations like fadein right out of the box, requiring zero JavaScript build configuration to get started.
-              </div>
-            </details>
-            <details class="accordion-item">
-              <summary class="accordion-header">
-                <span>Can I use ycsts with React, Vue, or Next.js?</span>
-              </summary>
-              <div class="accordion-body">
-                Yes. Since ycsts outputs standard CSS files (ycsts.css and ycsts.min.css), you can import it into any framework with simple standard CSS imports.
-              </div>
-            </details>
+      <div class="mb-12">
+        <h3 class="text-xl font-bold mb-4">Badges & Live Indicators</h3>
+        <div class="flex flex-wrap gap-3 items-center">
+          <span class="badge badge-blue">Blue</span>
+          <span class="badge badge-green">Green</span>
+          <span class="badge badge-red">Red</span>
+          <span class="badge badge-yellow">Yellow</span>
+          <span class="badge badge-purple">Purple</span>
+          <span class="badge badge-indigo">Indigo</span>
+          <span class="badge badge-gray">Gray</span>
+          <span class="badge badge-blue badge-pill">Pill</span>
+          <span class="badge badge-outline">Outline</span>
+          <span class="badge badge-green flex items-center gap-2">
+            <span class="badge-dot-live text-green-500"></span> Live Cluster
+          </span>
+          <span class="badge badge-blue flex items-center gap-2">
+            <span class="badge-dot text-blue-500"></span> Online
+          </span>
+          <div class="relative inline-block">
+            <button class="btn btn-outline btn-sm">Notifications</button>
+            <span class="badge-counter">3</span>
           </div>
         </div>
+      </div>
 
+      <div>
+        <h3 class="text-xl font-bold mb-4">Progress & Loading Indicators</h3>
+        <div class="space-y-4 max-w-xl">
+          <div class="progress">
+            <div class="progress-bar" style="width: 65%;"></div>
+          </div>
+          <div class="progress progress-striped progress-animated">
+            <div class="progress-bar progress-bar-green" style="width: 80%;"></div>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="spinner spinner-sm text-blue-600"></div>
+            <div class="spinner spinner-md text-indigo-600"></div>
+            <div class="spinner spinner-lg text-purple-600"></div>
+            <div class="spinner-grow text-blue-600"></div>
+            <div class="spinner-dots text-indigo-600">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="usage" class="py-20 px-6 bg-gray-50 border-t border-gray-100">
-    <div class="container mx-auto max-w-3xl">
-      <div class="section-header fadein">
-        <h2 class="section-title">Quick Start</h2>
-        <p class="section-subtitle">Choose the method that best fits your workflow.</p>
-      </div>
+  <section id="usage" class="py-20 px-6 bg-gray-50">
+    <div class="container mx-auto max-w-4xl text-center">
+      <div class="badge badge-indigo badge-pill mb-2">Getting Started</div>
+      <h2 class="section-title">Start Building with ycsts</h2>
+      <p class="section-subtitle">Initialize a project in seconds with zero configuration.</p>
 
-      <div class="space-y-8 mt-10">
-
-        <div class="card card-body fadein fadein-delay-1">
-          <h3 class="text-base font-bold text-gray-900 mb-2">1. Instant CLI Initialization</h3>
-          <p class="text-sm text-gray-600 mb-3">Scaffold a working starter project with local CSS bundle in seconds:</p>
-          <pre class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">npx @yanzyu/ycsts init</pre>
+      <div class="mt-8 text-left max-w-2xl mx-auto space-y-4">
+        <div class="card card-body bg-gray-900 text-gray-100 font-mono text-sm overflow-x-auto">
+          <div class="text-gray-400"># Option A: Zero-install starter scaffold</div>
+          <div class="text-green-400">npx ycsts-framework init</div>
+          <div class="text-gray-400 mt-3"># Option B: Scoped package starter scaffold</div>
+          <div class="text-green-400">npx @yanzyu/ycsts init</div>
+          <div class="text-gray-400 mt-3"># Option C: Global CLI command</div>
+          <div class="text-green-400">npm install -g ycsts-framework</div>
+          <div class="text-green-400">ycsts init</div>
         </div>
-
-        <div class="card card-body fadein fadein-delay-2">
-          <h3 class="text-base font-bold text-gray-900 mb-2">2. Install via npm</h3>
-          <p class="text-sm text-gray-600 mb-3">Add ycsts as a dependency in your modern Node.js project:</p>
-          <pre class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">npm install @yanzyu/ycsts</pre>
-          <p class="text-sm text-gray-600 mt-3 mb-1">Import into your JavaScript or HTML:</p>
-          <pre class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">&lt;link rel="stylesheet" href="node_modules/@yanzyu/ycsts/dist/ycsts.min.css"&gt;</pre>
-        </div>
-
-        <div class="card card-body fadein fadein-delay-3">
-          <h3 class="text-base font-bold text-gray-900 mb-2">3. Direct CDN Link</h3>
-          <p class="text-sm text-gray-600 mb-3">No installation required. Drop directly into any HTML document:</p>
-          <pre class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yanzyu/ycsts@1.1.0/dist/ycsts.min.css"&gt;</pre>
-        </div>
-
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="bg-gray-900 text-gray-400 py-12 px-6">
-  <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-4">
-    <div class="flex items-center gap-3">
-      <span class="text-xl font-bold text-white">ycsts</span>
-      <span class="text-xs bg-gray-800 text-gray-300 px-2 py-0.5 rounded">v1.1.0</span>
-    </div>
-    <div class="flex items-center gap-6 text-sm">
-      <a href="https://github.com/yanzyuyu/ycsts-framework" class="hover:text-white transition-colors duration-150">GitHub Repository</a>
-      <span>MIT License</span>
-    </div>
+<footer class="py-8 px-6 bg-white border-t border-gray-200 text-center text-sm text-gray-500">
+  <div class="container mx-auto">
+    ycsts CSS Framework &bull; Released under the MIT License &bull; Built with love.
   </div>
 </footer>
 

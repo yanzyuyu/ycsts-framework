@@ -1,6 +1,6 @@
 # ycsts
 
-A complete utility-first CSS framework with a rich component layer and signature single-word entrance animations.
+A complete utility-first CSS framework with an exhaustive component library and signature single-word entrance animations.
 
 ## Overview
 
@@ -8,75 +8,110 @@ ycsts combines the granular utility coverage of modern CSS with pre-built produc
 
 ### Key Capabilities
 
-- Comprehensive utility engine spanning layout, flexbox, grid, spacing, sizing, typography, colors, borders, effects, transforms, filters, and aspect ratio.
-- Signature `fadein` animation suite with directional variants, scales, blur transitions, duration controls, and delay steps.
-- Extended modern animation library including continuous floating, neon glow pulses, skeleton shimmer, wiggles, and directional slides.
-- Pre-built component library covering buttons, cards, glassmorphism surfaces, form controls, badges with live indicators, KPI stat cards, alerts, modals, navigation bars, tabs, and tables.
-- Zero configuration required. Works via npx starter initialization, npm package import, or direct CDN links.
+- Comprehensive utility engine covering layout, flexbox, grid, spacing, sizing, typography, colors, borders, effects, transforms, filters, aspect ratios, and responsive breakpoints.
+- Signature `fadein` animation suite with 20+ directional, scale, spring, bounce, blur, and 3D flip variants, plus duration and delay controls.
+- Ambient motion suite featuring continuous floating, neon pulse auras, skeleton loading shimmers, animated marquees, and organic morphing.
+- Interactive micro-interaction hover classes (`hover-float`, `hover-scale`, `hover-glow`, `hover-rotate`, `hover-tilt`).
+- Complete component library covering buttons (solid, soft, gradient, glow, glass, loading), cards, glassmorphism surfaces, form controls with floating labels, pure-CSS dropdowns, accordions, tabs, live status badges, KPI stat cards, alerts, toasts, modals, tooltips, timelines, and chat bubbles.
+- 100% Pure CSS runtime. Zero JavaScript dependencies required for interactive components.
 
 ---
 
 ## Installation & Setup
 
+ycsts is published on npm under both `ycsts-framework` (unscoped) and `@yanzyu/ycsts` (scoped).
+
+> **Note on CLI Execution:**
+> Due to npm registry naming collision rules protecting core web abbreviations like `css` and `scss`, bare unscoped `ycsts` cannot be registered directly on npm. Use `npx ycsts-framework init` or `npx @yanzyu/ycsts init`.
+
 ### Option 1: Scaffold Starter Project (Recommended)
 
-Generate `ycsts.config.js`, `index.html`, and a bundled `ycsts.min.css` directly in your project folder:
+Generate `ycsts.config.js`, `index.html`, and a bundled `ycsts.min.css` directly in your current directory:
 
 ```bash
+# Using unscoped package:
+npx ycsts-framework init
+
+# OR using scoped package:
 npx @yanzyu/ycsts init
 ```
 
 To overwrite existing files if already present:
 
 ```bash
-npx @yanzyu/ycsts init --force
+npx ycsts-framework init --force
 ```
 
-### Option 2: Install via npm
+### Option 2: Global CLI Installation
+
+Install globally to enable direct `ycsts` commands from any terminal session:
 
 ```bash
+npm install -g ycsts-framework
+```
+
+Then initialize projects directly:
+
+```bash
+ycsts init
+ycsts --version
+```
+
+### Option 3: Local Project Installation via npm
+
+Install as a project dependency:
+
+```bash
+npm install ycsts-framework
+# or
 npm install @yanzyu/ycsts
 ```
 
-Import into your main CSS file:
+Import into your main stylesheet:
 
 ```css
-@import "@yanzyu/ycsts/dist/ycsts.min.css";
+@import "ycsts-framework/dist/ycsts.min.css";
 ```
 
 Or link directly in HTML:
 
 ```html
-<link rel="stylesheet" href="node_modules/@yanzyu/ycsts/dist/ycsts.min.css">
+<link rel="stylesheet" href="node_modules/ycsts-framework/dist/ycsts.min.css">
 ```
 
-### Option 3: Direct CDN Link
+Once installed locally, the binary is available in `npx`:
+
+```bash
+npx ycsts init
+npx ycsts build
+```
+
+### Option 4: Direct CDN Link
 
 Drop the stylesheet into any HTML document without installing Node.js:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yanzyu/ycsts@1.1.0/dist/ycsts.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ycsts-framework@1.2.0/dist/ycsts.min.css">
 ```
 
 Alternative via unpkg:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@yanzyu/ycsts@1.1.0/dist/ycsts.min.css">
+<link rel="stylesheet" href="https://unpkg.com/ycsts-framework@1.2.0/dist/ycsts.min.css">
 ```
 
 ---
 
 ## CLI Reference
 
-Run commands using `npx @yanzyu/ycsts <command>` or install globally using `npm install -g @yanzyu/ycsts`:
-
-```bash
-npx @yanzyu/ycsts init          # Copies starter template, config, and ycsts.min.css to current directory
-npx @yanzyu/ycsts init --force  # Overwrites existing template files
-npx @yanzyu/ycsts build         # Recompiles dist/ycsts.css and dist/ycsts.min.css from source
-npx @yanzyu/ycsts --version     # Prints current installed version
-npx @yanzyu/ycsts --help        # Displays command line usage
-```
+| Command | Description |
+|---|---|
+| `ycsts init` | Copies starter template, config, and `ycsts.min.css` to the current directory |
+| `ycsts init --force` | Overwrites existing template files |
+| `ycsts build` | Compiles CSS from source into `dist/ycsts.css` and `dist/ycsts.min.css` |
+| `ycsts build -i <in> -o <out>` | Compiles custom source file to specified output |
+| `ycsts --version` | Prints current installed version |
+| `ycsts --help` | Displays command line usage |
 
 ---
 
@@ -84,45 +119,66 @@ npx @yanzyu/ycsts --help        # Displays command line usage
 
 ### Signature Fadein Family
 
-Add `fadein` to any element for an immediate entrance transition.
+Add `fadein` or any variant to an element for an immediate hardware-accelerated entrance transition upon render.
 
 ```html
 <h1 class="fadein">Fades in on load</h1>
 <div class="fadein-up fadein-delay-1">Slides up into view</div>
 <div class="fadein-scale fadein-delay-2">Zooms up from 92% scale</div>
-<div class="fadein-blur fadein-delay-3">Transitions from blur to crystal clear</div>
-<div class="fadein-left">Enters from right to left</div>
+<div class="fadein-blur fadein-delay-3">Transitions from lens blur to crisp</div>
+<div class="fadein-bounce fadein-delay-4">Bounces into position</div>
+<div class="fadein-glow">Enters with an ambient light aura</div>
 ```
 
-#### Directional & Transform Variants
+#### Entrance Variants
 
 | Class | Description |
 |---|---|
-| `fadein` | Default entrance: fades in while translating up 12px |
+| `fadein` | Standard entrance: fades in with 12px upward slide |
 | `fadein-up` | Enters from 24px below |
 | `fadein-down` | Enters from 24px above |
 | `fadein-left` | Enters from 24px right towards left |
 | `fadein-right` | Enters from 24px left towards right |
-| `fadein-scale` | Enters scaling from 0.92 to 1.0 with opacity fade |
+| `fadein-scale` | Enters scaling from 0.92 to 1.0 |
 | `fadein-zoom-in` | Enters scaling from 0.85 to 1.0 |
-| `fadein-zoom-out` | Enters scaling from 1.15 to 1.0 |
-| `fadein-blur` | Enters transitioning from 10px blur to 0px |
-| `fadein-rotate` | Enters with subtle tilt (-4deg to 0deg) |
+| `fadein-zoom-out` | Enters scaling down from 1.15 to 1.0 |
+| `fadein-pop` | Energetic entrance scaling from 0.35 with slight overshoot |
+| `fadein-blur` | Transitions from 10px blur to crystal clear |
+| `fadein-blur-up` | Upward slide while transitioning from 14px blur to sharp |
+| `fadein-blur-down` | Downward slide while transitioning from 14px blur to sharp |
+| `fadein-blur-scale` | Scale up entrance with lens blur resolution |
+| `fadein-bounce` | Enters with a playful spring bounce |
+| `fadein-glow` | Enters with an illuminating light aura |
+| `fadein-expand` | Enters expanding letter-spacing and dimensions smoothly |
+| `fadein-float` | Enters and settles into position |
+| `fadein-swing` | 3D entrance swinging down from top perspective |
+| `fadein-elastic` | Multi-stage elastic spring entrance |
+| `fadein-tilt` | Enters with subtle perspective rotation |
+| `fadein-spiral` | Subtle rotational spiral zoom entrance |
+| `fadein-slide-up` | Full 100% vertical slide-up entrance |
+| `fadein-slide-down` | Full 100% vertical slide-down entrance |
+| `fadein-slide-left` | Full 100% horizontal slide-left entrance |
+| `fadein-slide-right` | Full 100% horizontal slide-right entrance |
+| `fadein-flip-x` | 3D horizontal card flip entrance |
+| `fadein-flip-y` | 3D vertical card flip entrance |
 
 #### Duration Modifiers
 
 | Class | Duration |
 |---|---|
+| `fadein-instant` | 75ms |
 | `fadein-faster` | 100ms |
 | `fadein-fast` | 200ms |
 | `fadein-normal` | 400ms |
 | `fadein-slow` | 800ms |
 | `fadein-slower` | 1200ms |
+| `fadein-ultra-slow` | 2000ms |
 
 #### Delay Modifiers
 
 | Class | Delay |
 |---|---|
+| `fadein-delay-0` | 0ms |
 | `fadein-delay-1` | 100ms |
 | `fadein-delay-2` | 200ms |
 | `fadein-delay-3` | 300ms |
@@ -133,36 +189,65 @@ Add `fadein` to any element for an immediate entrance transition.
 | `fadein-delay-8` | 800ms |
 | `fadein-delay-9` | 900ms |
 | `fadein-delay-10` | 1000ms |
+| `fadein-delay-11` | 1100ms |
+| `fadein-delay-12` | 1200ms |
+| `fadein-delay-14` | 1400ms |
+| `fadein-delay-16` | 1600ms |
 
-#### Timing Curves
+#### Easing Modifiers
 
-| Class | Cubic Curve |
+| Class | Curve |
 |---|---|
 | `fadein-smooth` | `cubic-bezier(0.16, 1, 0.3, 1)` |
 | `fadein-spring` | `cubic-bezier(0.34, 1.56, 0.64, 1)` |
-| `fadein-bounce` | `cubic-bezier(0.68, -0.55, 0.265, 1.55)` |
+| `fadein-bounce-ease` | `cubic-bezier(0.68, -0.55, 0.265, 1.55)` |
 | `fadein-ease` | `ease` |
+| `fadein-linear` | `linear` |
 
-### Modern Motion Suite
+---
 
-| Class | Behavior |
+### Continuous Motion Suite
+
+| Class | Description |
 |---|---|
-| `animate-float` | Continuous 3-second gentle vertical float loop |
-| `animate-pulse-glow` | Pulsing ambient box-shadow glow aura |
-| `animate-shimmer` | Sweeping luxury highlight reflection for loading skeletons |
-| `animate-spin` | 1-second continuous rotation |
-| `animate-spin-slow` | 3-second gentle continuous rotation |
-| `animate-spin-reverse`| Counter-clockwise rotation loop |
-| `animate-ping` | Radar ripple ping scale effect |
-| `animate-pulse` | Opacity pulsing cycle |
-| `animate-bounce` | Standard bounce motion |
-| `animate-wiggle` | Playful back-and-forth rotational wiggle |
-| `animate-shake` | Horizontal shake for form errors |
-| `animate-heartbeat` | Double pulse heartbeat cycle |
-| `animate-flip-x` | 3D perspective horizontal flip |
-| `animate-flip-y` | 3D perspective vertical flip |
-| `animate-slide-up` | Full 100% upward slide entrance |
-| `animate-slide-down` | Full 100% downward slide entrance |
+| `animate-float` | Gentle 3-second sinusoidal vertical floating |
+| `animate-float-slow` | Luxury 5-second slow floating motion for hero elements |
+| `animate-pulse-glow` | Breathing neon blue shadow aura |
+| `animate-glow-indigo` | Breathing indigo shadow aura |
+| `animate-glow-emerald` | Breathing emerald shadow aura |
+| `animate-glow-rose` | Breathing rose shadow aura |
+| `animate-shimmer` | Continuous liquid metallic loading sweep |
+| `animate-aurora` | Multi-color shifting gradient background |
+| `animate-morph` | Smooth organic border-radius morphing blob |
+| `animate-marquee` | Continuous horizontal scrolling ticker |
+| `animate-marquee-reverse` | Reverse horizontal scrolling ticker |
+| `animate-radar` | Radar beacon ping ripple |
+| `animate-gradient` | Animated multi-color gradient shift |
+| `animate-heartbeat` | Rhythmic double-pulse scale animation |
+| `animate-wiggle` | Subtle rotational wobble |
+| `animate-shake` | Horizontal error feedback shake |
+| `animate-spin` | Infinite 360-degree rotation |
+| `animate-spin-slow` | Slow 3-second infinite rotation |
+| `animate-ping` | Expanding scale ping with opacity drop |
+| `animate-pulse` | Opacity pulsing animation |
+| `animate-bounce` | Vertical bounce animation |
+
+---
+
+### Hover Micro-Interactions
+
+| Class | Hover Effect |
+|---|---|
+| `hover-float` | Lifts upward 4px with an elevated drop shadow |
+| `hover-scale` | Scales smoothly to 104% |
+| `hover-scale-sm` | Subtle scale to 102% |
+| `hover-scale-lg` | Pronounced scale to 108% |
+| `hover-glow` | Illuminates blue ambient shadow on hover |
+| `hover-glow-indigo` | Illuminates indigo ambient shadow on hover |
+| `hover-glow-emerald` | Illuminates emerald ambient shadow on hover |
+| `hover-glow-rose` | Illuminates rose ambient shadow on hover |
+| `hover-rotate` | Tilts slightly by 2 degrees on hover |
+| `hover-tilt` | 3D perspective surface tilt on hover |
 
 ---
 
@@ -171,6 +256,7 @@ Add `fadein` to any element for an immediate entrance transition.
 ### Buttons
 
 ```html
+<!-- Solid Variants -->
 <button class="btn btn-primary">Primary</button>
 <button class="btn btn-secondary">Secondary</button>
 <button class="btn btn-success">Success</button>
@@ -178,43 +264,190 @@ Add `fadein` to any element for an immediate entrance transition.
 <button class="btn btn-warning">Warning</button>
 <button class="btn btn-info">Info</button>
 <button class="btn btn-dark">Dark</button>
-<button class="btn btn-light">Light</button>
-<button class="btn btn-primary btn-glow">Glow</button>
-<button class="btn btn-outline-primary">Outline</button>
-<button class="btn btn-primary btn-pill">Pill</button>
 
+<!-- Soft Modern Variants -->
+<button class="btn btn-soft-primary">Soft Blue</button>
+<button class="btn btn-soft-success">Soft Green</button>
+<button class="btn btn-soft-danger">Soft Red</button>
+<button class="btn btn-soft-warning">Soft Amber</button>
+<button class="btn btn-soft-info">Soft Cyan</button>
+
+<!-- Gradient Variants -->
+<button class="btn btn-gradient-primary btn-glow">Gradient Blue</button>
+<button class="btn btn-gradient-indigo btn-glow-indigo">Gradient Indigo</button>
+<button class="btn btn-gradient-rose btn-glow-rose">Gradient Rose</button>
+<button class="btn btn-gradient-sunset">Sunset Glow</button>
+<button class="btn btn-gradient-emerald btn-glow-emerald">Gradient Emerald</button>
+<button class="btn btn-gradient-cyber">Cyber Glow</button>
+
+<!-- Glass & States -->
+<button class="btn btn-glass">Glass Light</button>
+<button class="btn btn-glass-dark">Glass Dark</button>
+<button class="btn btn-primary btn-loading">Loading</button>
+
+<!-- Shapes & Sizes -->
+<button class="btn btn-primary btn-pill">Pill Button</button>
+<button class="btn btn-primary btn-xs">Extra Small</button>
+<button class="btn btn-primary btn-sm">Small</button>
+<button class="btn btn-primary btn-md">Medium</button>
+<button class="btn btn-primary btn-lg">Large</button>
+<button class="btn btn-primary btn-xl">Extra Large</button>
+<button class="btn btn-primary btn-2xl">2X Large</button>
+
+<!-- Button Groups -->
 <div class="btn-group">
-  <button class="btn btn-outline">Years</button>
-  <button class="btn btn-outline">Months</button>
-  <button class="btn btn-outline">Days</button>
+  <button class="btn btn-primary">Left</button>
+  <button class="btn btn-primary">Center</button>
+  <button class="btn btn-primary">Right</button>
 </div>
 ```
 
-Sizes: `btn-xs`, `btn-sm`, `btn-md`, `btn-lg`, `btn-xl`, `btn-block`.
-
-### Cards & Glassmorphism
+### Cards & Surfaces
 
 ```html
+<!-- Standard Card -->
 <div class="card card-hover">
   <div class="card-header">
-    <h3 class="card-title">Card Title</h3>
+    <span class="card-title">Card Title</span>
   </div>
   <div class="card-body">
-    Standard card with soft border and elevation on hover.
+    Card content goes here.
   </div>
   <div class="card-footer">
     <button class="btn btn-primary btn-sm">Action</button>
   </div>
 </div>
 
-<div class="card card-glass card-hover">
-  <div class="card-body">
-    Frosted glass card with backdrop blur and subtle border.
+<!-- Frosted Glass Card -->
+<div class="card card-glass card-body">
+  Frosted backdrop-filter glass surface.
+</div>
+
+<!-- Dark Glass Card -->
+<div class="card card-glass-dark card-body">
+  High-contrast dark glass surface.
+</div>
+
+<!-- Accent Border Glass -->
+<div class="card card-glass-bordered card-body">
+  Glass card with accent blue border highlight.
+</div>
+
+<!-- Neon Gradient Border Card -->
+<div class="card-gradient-border card-body">
+  Continuous gradient border frame.
+</div>
+
+<!-- KPI Stat Card -->
+<div class="stat-card hover-float">
+  <div class="stat-title">Monthly Revenue</div>
+  <div class="stat-value text-blue-600">$48,200</div>
+  <div class="stat-desc stat-trend-up">&uarr; 14% vs last month</div>
+</div>
+```
+
+### Forms & Floating Labels
+
+```html
+<!-- Floating Label Input -->
+<div class="form-floating">
+  <input type="text" class="input" id="email" placeholder="name@example.com">
+  <label for="email">Email address</label>
+</div>
+
+<!-- Standard Inputs & Glass -->
+<input type="text" class="input" placeholder="Standard input">
+<input type="text" class="input input-glass" placeholder="Glass input">
+
+<!-- Form Group with Validation -->
+<div class="form-group">
+  <label class="label label-required">Username</label>
+  <input type="text" class="input is-valid" value="alex_morgan">
+  <span class="valid-feedback">Username is available.</span>
+</div>
+
+<!-- Custom Select -->
+<select class="select">
+  <option>Option 1</option>
+  <option>Option 2</option>
+</select>
+
+<!-- Toggle Switch -->
+<label class="switch switch-md">
+  <input type="checkbox" checked>
+  <span class="toggle-slider"></span>
+</label>
+
+<!-- Custom File Input -->
+<input type="file" class="file-input">
+
+<!-- Custom Range Slider -->
+<input type="range" class="range" min="0" max="100" value="50">
+```
+
+### Pure-CSS Dropdown Menu
+
+```html
+<div class="dropdown">
+  <button class="btn btn-primary">Dropdown &blacktriangledown;</button>
+  <div class="dropdown-menu">
+    <a href="#" class="dropdown-item">Dashboard</a>
+    <a href="#" class="dropdown-item">Settings</a>
+    <div class="dropdown-divider"></div>
+    <a href="#" class="dropdown-item text-red-600">Sign Out</a>
   </div>
 </div>
 ```
 
-### Badges & Status Indicators
+### Pure-CSS Details Accordion
+
+```html
+<details class="accordion-item" open>
+  <summary class="accordion-header">
+    <span>Accordion Header Title</span>
+    <span>&blacktriangledown;</span>
+  </summary>
+  <div class="accordion-body">
+    Accordion collapsible body content rendered without JavaScript.
+  </div>
+</details>
+```
+
+### Pure-CSS Tabs
+
+```html
+<!-- Boxed Style -->
+<div class="tabs tabs-boxed">
+  <button class="tab-btn active">Overview</button>
+  <button class="tab-btn">Analytics</button>
+  <button class="tab-btn">Settings</button>
+</div>
+
+<!-- Pill Style -->
+<div class="tabs tabs-pill">
+  <button class="tab-btn active">Tab 1</button>
+  <button class="tab-btn">Tab 2</button>
+</div>
+```
+
+### Pure-CSS Tooltips
+
+```html
+<!-- Attribute-based tooltip -->
+<button class="btn btn-outline" data-tooltip="Instant tooltip message">Hover me</button>
+
+<!-- Positioned tooltips -->
+<div class="tooltip tooltip-top">
+  <button class="btn btn-sm">Top</button>
+  <span class="tooltip-content">Top tooltip</span>
+</div>
+<div class="tooltip tooltip-bottom">
+  <button class="btn btn-sm">Bottom</button>
+  <span class="tooltip-content">Bottom tooltip</span>
+</div>
+```
+
+### Badges & Live Indicators
 
 ```html
 <span class="badge badge-blue">Blue</span>
@@ -222,134 +455,67 @@ Sizes: `btn-xs`, `btn-sm`, `btn-md`, `btn-lg`, `btn-xl`, `btn-block`.
 <span class="badge badge-red">Red</span>
 <span class="badge badge-yellow">Yellow</span>
 <span class="badge badge-purple">Purple</span>
-<span class="badge badge-emerald">Emerald</span>
-<span class="badge badge-cyan">Cyan</span>
+<span class="badge badge-indigo">Indigo</span>
+<span class="badge badge-soft-blue">Soft Blue</span>
+<span class="badge badge-soft-green">Soft Green</span>
 
-<span class="badge badge-green badge-pill">
-  <span class="badge-dot-live"></span>
-  Active Cluster
+<!-- Live Pulsing Cluster Indicator -->
+<span class="badge badge-green flex items-center gap-2">
+  <span class="badge-dot-live text-green-500"></span> Live System
 </span>
-```
 
-### Form Controls
-
-```html
-<div class="form-group">
-  <label class="label label-required">Email Address</label>
-  <input type="email" class="input" placeholder="you@domain.com">
-  <span class="form-hint">Must be a valid business address.</span>
-</div>
-
-<div class="input-group">
-  <span class="input-group-text">https://</span>
-  <input type="text" class="input" placeholder="domain.com">
-</div>
-
-<label class="toggle">
-  <input type="checkbox" checked>
-  <span class="toggle-slider"></span>
-</label>
-
-<input type="range" class="range">
-```
-
-### Alerts
-
-```html
-<div class="alert alert-info">Information notice for user.</div>
-<div class="alert alert-success">Transaction confirmed successfully.</div>
-<div class="alert alert-warning">Database index rebuilding in progress.</div>
-<div class="alert alert-error">Unable to establish connection to upstream server.</div>
-```
-
-### Dashboard KPI Metric Cards
-
-```html
-<div class="stat-card">
-  <div class="stat-title">Total Revenue</div>
-  <div class="stat-value text-blue-600">$128,430</div>
-  <div class="stat-desc"><span class="stat-up">+14.2%</span> vs previous month</div>
+<!-- Counter Badge -->
+<div class="relative inline-block">
+  <button class="btn btn-outline btn-sm">Inbox</button>
+  <span class="badge-counter">4</span>
 </div>
 ```
 
-### Accordion (Zero JavaScript)
+### Timelines, Steppers & Chat
 
 ```html
-<details class="accordion-item" open>
-  <summary class="accordion-header">What dependencies does ycsts require?</summary>
-  <div class="accordion-body">None. It is pure CSS and works in all modern browsers.</div>
-</details>
+<!-- Stepper -->
+<ul class="steps">
+  <li class="step step-complete">Account</li>
+  <li class="step step-active">Billing</li>
+  <li class="step">Confirmation</li>
+</ul>
+
+<!-- Timeline -->
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-point"></div>
+    <div class="timeline-content">Project initialized</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-point"></div>
+    <div class="timeline-content">Stylesheets compiled</div>
+  </div>
+</div>
+
+<!-- Chat Bubbles -->
+<div class="chat">
+  <div class="chat-start">
+    <div class="chat-bubble chat-bubble-secondary">Hello! How can I help you today?</div>
+  </div>
+  <div class="chat-end">
+    <div class="chat-bubble chat-bubble-primary">I want to try ycsts framework.</div>
+  </div>
+</div>
 ```
-
-### Tables
-
-```html
-<table class="table-ycsts table-striped table-hover">
-  <thead>
-    <tr>
-      <th>Identifier</th>
-      <th>Status</th>
-      <th>Latency</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>node-east-01</td>
-      <td><span class="badge badge-green">Healthy</span></td>
-      <td>18ms</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-### Navigation & Layout
-
-- Navbar: `.navbar`, `.navbar-brand`, `.navbar-nav`
-- Nav links: `.nav`, `.nav-link`, `.nav-link.active`
-- Tabs: `.tabs`, `.tab-btn`, `.tab-btn.active`
-- Breadcrumb: `.breadcrumb`, `.breadcrumb-item`, `.breadcrumb-link`, `.breadcrumb-current`
-- Avatars: `.avatar`, `.avatar-sm` through `.avatar-2xl`, `.avatar-group`, `.avatar-status-online`
-- Modal: `.modal-overlay`, `.modal`, `.modal-header`, `.modal-title`, `.modal-body`, `.modal-footer`
-- Skeletons: `.skeleton`, `.skeleton-text`, `.skeleton-circle`
-- Progress: `.progress`, `.progress-bar`, `.progress-bar-green`, `.progress-striped`, `.progress-animated`
 
 ---
 
-## Utility Classes Reference
+## Browser Support
 
-### Layout & Sizing
-
-- Display: `block`, `inline-block`, `inline`, `flex`, `inline-flex`, `grid`, `inline-grid`, `hidden`
-- Positioning: `static`, `fixed`, `absolute`, `relative`, `sticky`, `inset-0`, `top-*`, `right-*`, `bottom-*`, `left-*`, `z-0` through `z-50`
-- Sizing: `w-*`, `h-*`, `min-w-*`, `max-w-*`, `min-h-*`, `max-h-*`
-- Aspect Ratio: `aspect-auto`, `aspect-square`, `aspect-video`, `aspect-4/3`
-
-### Modern Visual Utilities
-
-- Backdrop Blur: `backdrop-blur-none`, `backdrop-blur-sm`, `backdrop-blur`, `backdrop-blur-md`, `backdrop-blur-lg`, `backdrop-blur-xl`, `backdrop-blur-2xl`
-- Line Clamp: `line-clamp-1`, `line-clamp-2`, `line-clamp-3`, `line-clamp-4`, `line-clamp-none`
-- Scroll: `scroll-auto`, `scroll-smooth`, `snap-start`, `snap-end`, `snap-center`, `snap-x`, `snap-y`
-- Text Wrap: `text-wrap`, `text-nowrap`, `text-balance`, `text-pretty`
-- Glass Utilities: `.glass`, `.glass-dark`
-- Neon Glow Utilities: `.glow-blue`, `.glow-purple`, `.glow-green`, `.glow-amber`
-
----
-
-## Building From Source
-
-```bash
-git clone https://github.com/yanzyuyu/ycsts-framework.git
-cd ycsts-framework
-npm install
-npm run build
-```
-
-Compiled distribution outputs:
-- `dist/ycsts.css` (full stylesheet)
-- `dist/ycsts.min.css` (production minified stylesheet)
+ycsts is built on standard CSS3 specifications and runs natively in all evergreen browsers:
+- Google Chrome 88+
+- Apple Safari 14+
+- Mozilla Firefox 85+
+- Microsoft Edge 88+
 
 ---
 
 ## License
 
-MIT License. Free for personal and commercial projects.
+MIT License. Designed and engineered by yanzyuyu.
