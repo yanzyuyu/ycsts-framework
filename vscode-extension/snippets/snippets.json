@@ -1,6 +1,207 @@
 {
-  "YCSTS Fade In": {
-    "prefix": "yc-fadein",
+  "YCSTS Button A (Link)": {
+    "prefix": ["button-a", "btn-a", "yc-button-a", "yc-btn-a"],
+    "body": [
+      "<a href=\"${1:#}\" class=\"btn ${2|btn-primary,btn-secondary,btn-gradient,btn-glow,btn-soft,btn-outline|}\" role=\"button\">${3:Link Button}</a>"
+    ],
+    "description": "YCSTS link styled as a button"
+  },
+  "YCSTS Button Block (Full Width)": {
+    "prefix": ["button-block", "btn-block", "yc-button-block", "yc-btn-block"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn ${2|btn-primary,btn-secondary,btn-gradient,btn-glow,btn-soft,btn-outline|} w-full\">${3:Block Button}</button>"
+    ],
+    "description": "YCSTS full-width block button"
+  },
+  "YCSTS Button Checkbox": {
+    "prefix": ["button-checkbox", "btn-checkbox", "yc-button-checkbox", "yc-btn-checkbox"],
+    "body": [
+      "<label class=\"btn ${1|btn-outline,btn-soft,btn-secondary|} cursor-pointer inline-flex items-center gap-2\">",
+      "\t<input type=\"checkbox\" class=\"toggle toggle-sm\" ${2:checked}>",
+      "\t<span>${3:Checkbox Button}</span>",
+      "</label>"
+    ],
+    "description": "YCSTS toggleable checkbox button"
+  },
+  "YCSTS Button Default": {
+    "prefix": ["button-default", "btn-default", "yc-button-default", "yc-btn-default"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn ${2|btn-primary,btn-secondary,btn-gradient,btn-glow,btn-soft,btn-outline,btn-dark,btn-light|}\">${3:Button}</button>"
+    ],
+    "description": "YCSTS button with selectable variant"
+  },
+  "YCSTS Button Disabled A (Link)": {
+    "prefix": ["button-disabled-a", "btn-disabled-a", "yc-button-disabled-a", "yc-btn-disabled-a"],
+    "body": [
+      "<a href=\"#\" class=\"btn ${1|btn-primary,btn-secondary,btn-gradient,btn-outline|} opacity-50 pointer-events-none\" role=\"button\" aria-disabled=\"true\">${2:Disabled Link}</a>"
+    ],
+    "description": "YCSTS disabled link button"
+  },
+  "YCSTS Button Disabled": {
+    "prefix": ["button-disabled", "btn-disabled", "yc-button-disabled", "yc-btn-disabled"],
+    "body": [
+      "<button type=\"button\" class=\"btn ${1|btn-primary,btn-secondary,btn-gradient,btn-outline|} opacity-50 cursor-not-allowed\" disabled>${2:Disabled Button}</button>"
+    ],
+    "description": "YCSTS disabled button"
+  },
+  "YCSTS Button Input": {
+    "prefix": ["button-input", "btn-input", "yc-button-input", "yc-btn-input"],
+    "body": [
+      "<input type=\"${1|button,submit,reset|}\" class=\"btn ${2|btn-primary,btn-secondary,btn-gradient,btn-soft,btn-outline|}\" value=\"${3:Input Button}\">"
+    ],
+    "description": "YCSTS input element styled as a button"
+  },
+  "YCSTS Button Outline": {
+    "prefix": ["button-outline", "btn-outline", "yc-button-outline", "yc-btn-outline"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn btn-outline\">${2:Outline Button}</button>"
+    ],
+    "description": "YCSTS outline border button"
+  },
+  "YCSTS Button Radio": {
+    "prefix": ["button-radio", "btn-radio", "yc-button-radio", "yc-btn-radio"],
+    "body": [
+      "<div class=\"inline-flex rounded-lg border border-zinc-700 p-1 bg-zinc-900/60\" role=\"radiogroup\">",
+      "\t<label class=\"btn btn-sm ${1:btn-primary} cursor-pointer\">",
+      "\t\t<input type=\"radio\" name=\"${2:radioGroup}\" class=\"sr-only\" checked>",
+      "\t\t<span>${3:Option 1}</span>",
+      "\t</label>",
+      "\t<label class=\"btn btn-sm btn-ghost cursor-pointer text-zinc-400 hover:text-zinc-100\">",
+      "\t\t<input type=\"radio\" name=\"${2:radioGroup}\" class=\"sr-only\">",
+      "\t\t<span>${4:Option 2}</span>",
+      "\t</label>",
+      "</div>"
+    ],
+    "description": "YCSTS segmented radio button group"
+  },
+  "YCSTS Button Sizes": {
+    "prefix": ["button-sizes", "btn-sizes", "yc-button-sizes", "yc-btn-sizes"],
+    "body": [
+      "<div class=\"flex items-center gap-3\">",
+      "\t<button type=\"button\" class=\"btn ${1:btn-primary} btn-sm\">${2:Small}</button>",
+      "\t<button type=\"button\" class=\"btn ${1:btn-primary}\">${3:Default}</button>",
+      "\t<button type=\"button\" class=\"btn ${1:btn-primary} btn-lg\">${4:Large}</button>",
+      "</div>"
+    ],
+    "description": "YCSTS buttons in small, default, and large sizes"
+  },
+  "YCSTS Button Toggle": {
+    "prefix": ["button-toggle", "btn-toggle", "yc-button-toggle", "yc-btn-toggle"],
+    "body": [
+      "<button type=\"button\" class=\"btn ${1|btn-secondary,btn-soft,btn-outline|}\" data-toggle=\"button\" aria-pressed=\"false\">${2:Toggle Button}</button>"
+    ],
+    "description": "YCSTS toggleable state button"
+  },
+  "YCSTS Button Primary": {
+    "prefix": ["button-primary", "btn-primary", "yc-button-primary", "yc-btn-primary"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn btn-primary\">${2:Primary Action}</button>"
+    ],
+    "description": "YCSTS solid primary button"
+  },
+  "YCSTS Button Secondary": {
+    "prefix": ["button-secondary", "btn-secondary", "yc-button-secondary", "yc-btn-secondary"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn btn-secondary\">${2:Secondary Action}</button>"
+    ],
+    "description": "YCSTS sleek secondary button"
+  },
+  "YCSTS Button Success": {
+    "prefix": ["button-success", "btn-success", "yc-button-success", "yc-btn-success"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn btn-success\">${2:Success Action}</button>"
+    ],
+    "description": "YCSTS emerald success button"
+  },
+  "YCSTS Button Danger": {
+    "prefix": ["button-danger", "btn-danger", "yc-button-danger", "yc-btn-danger"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn btn-danger\">${2:Delete Action}</button>"
+    ],
+    "description": "YCSTS red danger button"
+  },
+  "YCSTS Button Warning": {
+    "prefix": ["button-warning", "btn-warning", "yc-button-warning", "yc-btn-warning"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn btn-warning\">${2:Warning Action}</button>"
+    ],
+    "description": "YCSTS amber warning button"
+  },
+  "YCSTS Button Info": {
+    "prefix": ["button-info", "btn-info", "yc-button-info", "yc-btn-info"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn btn-info\">${2:Info Action}</button>"
+    ],
+    "description": "YCSTS cyan info button"
+  },
+  "YCSTS Button Gradient": {
+    "prefix": ["button-gradient", "btn-gradient", "yc-button-gradient", "yc-btn-gradient"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn btn-gradient\">${2:Gradient Action}</button>"
+    ],
+    "description": "YCSTS radiant modern gradient button"
+  },
+  "YCSTS Button Glow": {
+    "prefix": ["button-glow", "btn-glow", "yc-button-glow", "yc-btn-glow"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn ${1:btn-primary} btn-glow\">${2:Glowing Action}</button>"
+    ],
+    "description": "YCSTS glowing neon aura button"
+  },
+  "YCSTS Button Soft": {
+    "prefix": ["button-soft", "btn-soft", "yc-button-soft", "yc-btn-soft"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn ${1|btn-soft-primary,btn-soft-success,btn-soft-danger,btn-soft-warning,btn-soft-info|}\">${2:Soft Action}</button>"
+    ],
+    "description": "YCSTS subtle modern soft-tint button"
+  },
+  "YCSTS Button Pill": {
+    "prefix": ["button-pill", "btn-pill", "yc-button-pill", "yc-btn-pill"],
+    "body": [
+      "<button type=\"${1|button,submit,reset|}\" class=\"btn ${1|btn-primary,btn-gradient,btn-secondary|} btn-pill\">${2:Pill Button}</button>"
+    ],
+    "description": "YCSTS fully rounded pill button"
+  },
+  "YCSTS Button Loading": {
+    "prefix": ["button-loading", "btn-loading", "yc-button-loading", "yc-btn-loading"],
+    "body": [
+      "<button type=\"button\" class=\"btn ${1:btn-primary} btn-loading\" disabled>",
+      "\t<span class=\"w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin\"></span>",
+      "\t<span>${2:Processing...}</span>",
+      "</button>"
+    ],
+    "description": "YCSTS button with active spinner indicator"
+  },
+  "YCSTS Button Group": {
+    "prefix": ["button-group", "btn-group", "yc-button-group", "yc-btn-group"],
+    "body": [
+      "<div class=\"inline-flex rounded-lg shadow-sm\" role=\"group\">",
+      "\t<button type=\"button\" class=\"btn btn-secondary rounded-r-none border-r-0\">${1:Left}</button>",
+      "\t<button type=\"button\" class=\"btn btn-secondary rounded-none border-r-0\">${2:Middle}</button>",
+      "\t<button type=\"button\" class=\"btn btn-secondary rounded-l-none\">${3:Right}</button>",
+      "</div>"
+    ],
+    "description": "YCSTS unified button group toolbar"
+  },
+  "YCSTS Button Icon": {
+    "prefix": ["button-icon", "btn-icon", "yc-button-icon", "yc-btn-icon"],
+    "body": [
+      "<button type=\"button\" class=\"btn ${1|btn-primary,btn-secondary,btn-gradient,btn-outline|} inline-flex items-center gap-2\">",
+      "\t<svg class=\"w-4 h-4\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"${2:M5 12h14M12 5l7 7-7 7}\"/></svg>",
+      "\t<span>${3:Action}</span>",
+      "</button>"
+    ],
+    "description": "YCSTS button with embedded vector SVG icon"
+  },
+  "YCSTS Button Close": {
+    "prefix": ["button-close", "btn-close", "yc-button-close", "yc-btn-close"],
+    "body": [
+      "<button type=\"button\" class=\"modal-close\" aria-label=\"Close\">&times;</button>"
+    ],
+    "description": "YCSTS modal or alert dismiss close button"
+  },
+  "YCSTS Fade In Default": {
+    "prefix": ["fadein-default", "fadein", "yc-fadein-default", "yc-fadein"],
     "body": [
       "<div class=\"fadein\">",
       "\t$0",
@@ -9,7 +210,7 @@
     "description": "YCSTS signature entrance animation (0.4s ease-out fade + slide up)"
   },
   "YCSTS Fade In Up": {
-    "prefix": "yc-fadein-up",
+    "prefix": ["fadein-up", "yc-fadein-up"],
     "body": [
       "<div class=\"fadein-up\">",
       "\t$0",
@@ -18,7 +219,7 @@
     "description": "YCSTS entrance animation sliding upwards"
   },
   "YCSTS Fade In Down": {
-    "prefix": "yc-fadein-down",
+    "prefix": ["fadein-down", "yc-fadein-down"],
     "body": [
       "<div class=\"fadein-down\">",
       "\t$0",
@@ -27,25 +228,25 @@
     "description": "YCSTS entrance animation sliding downwards"
   },
   "YCSTS Fade In Left": {
-    "prefix": "yc-fadein-left",
+    "prefix": ["fadein-left", "yc-fadein-left"],
     "body": [
       "<div class=\"fadein-left\">",
       "\t$0",
       "</div>"
     ],
-    "description": "YCSTS entrance animation sliding from left"
+    "description": "YCSTS entrance animation sliding from left to right"
   },
   "YCSTS Fade In Right": {
-    "prefix": "yc-fadein-right",
+    "prefix": ["fadein-right", "yc-fadein-right"],
     "body": [
       "<div class=\"fadein-right\">",
       "\t$0",
       "</div>"
     ],
-    "description": "YCSTS entrance animation sliding from right"
+    "description": "YCSTS entrance animation sliding from right to left"
   },
   "YCSTS Fade In Scale": {
-    "prefix": "yc-fadein-scale",
+    "prefix": ["fadein-scale", "yc-fadein-scale"],
     "body": [
       "<div class=\"fadein-scale\">",
       "\t$0",
@@ -54,7 +255,7 @@
     "description": "YCSTS zoom/scale entrance animation"
   },
   "YCSTS Fade In Blur": {
-    "prefix": "yc-fadein-blur",
+    "prefix": ["fadein-blur", "yc-fadein-blur"],
     "body": [
       "<div class=\"fadein-blur\">",
       "\t$0",
@@ -63,7 +264,7 @@
     "description": "YCSTS blur-to-sharp entrance animation"
   },
   "YCSTS Fade In Bounce": {
-    "prefix": "yc-fadein-bounce",
+    "prefix": ["fadein-bounce", "yc-fadein-bounce"],
     "body": [
       "<div class=\"fadein-bounce\">",
       "\t$0",
@@ -72,16 +273,16 @@
     "description": "YCSTS elastic spring bounce entrance animation"
   },
   "YCSTS Fade In Flip": {
-    "prefix": "yc-fadein-flip",
+    "prefix": ["fadein-flip", "yc-fadein-flip"],
     "body": [
       "<div class=\"fadein-flip\">",
       "\t$0",
       "</div>"
     ],
-    "description": "YCSTS 3D perspective flip entrance animation"
+    "description": "YCSTS 3D perspective card flip entrance animation"
   },
   "YCSTS Fade In Spiral": {
-    "prefix": "yc-fadein-spiral",
+    "prefix": ["fadein-spiral", "yc-fadein-spiral"],
     "body": [
       "<div class=\"fadein-spiral\">",
       "\t$0",
@@ -89,8 +290,35 @@
     ],
     "description": "YCSTS rotational zoom spiral entrance animation"
   },
+  "YCSTS Fade In Fast": {
+    "prefix": ["fadein-fast", "yc-fadein-fast"],
+    "body": [
+      "<div class=\"fadein fadein-fast\">",
+      "\t$0",
+      "</div>"
+    ],
+    "description": "YCSTS quick 0.2s entrance animation"
+  },
+  "YCSTS Fade In Slow": {
+    "prefix": ["fadein-slow", "yc-fadein-slow"],
+    "body": [
+      "<div class=\"fadein fadein-slow\">",
+      "\t$0",
+      "</div>"
+    ],
+    "description": "YCSTS relaxed 0.8s entrance animation"
+  },
+  "YCSTS Fade In Delay": {
+    "prefix": ["fadein-delay", "yc-fadein-delay"],
+    "body": [
+      "<div class=\"fadein ${1|fadein-delay-1,fadein-delay-2,fadein-delay-3,fadein-delay-4|}\">",
+      "\t$0",
+      "</div>"
+    ],
+    "description": "YCSTS entrance animation with staggered delay"
+  },
   "YCSTS Continuous Float": {
-    "prefix": "yc-animate-float",
+    "prefix": ["animate-float", "yc-animate-float"],
     "body": [
       "<div class=\"animate-float\">",
       "\t$0",
@@ -99,23 +327,23 @@
     "description": "Continuous ambient floating animation"
   },
   "YCSTS Continuous Pulse Glow": {
-    "prefix": "yc-animate-pulse-glow",
+    "prefix": ["animate-pulse-glow", "animate-glow-pulse", "yc-animate-pulse-glow"],
     "body": [
-      "<div class=\"animate-pulse-glow\">",
+      "<div class=\"${1|animate-glow-pulse,animate-glow-indigo,animate-glow-emerald|}\">",
       "\t$0",
       "</div>"
     ],
-    "description": "Continuous neon pulsing aura"
+    "description": "Continuous breathing neon aura"
   },
   "YCSTS Skeleton Shimmer": {
-    "prefix": "yc-animate-shimmer",
+    "prefix": ["animate-shimmer", "shimmer", "yc-animate-shimmer"],
     "body": [
       "<div class=\"animate-shimmer bg-zinc-800 h-${1:4} w-${2:full} rounded-${3:md}\"></div>"
     ],
     "description": "Skeleton loading shimmer wave animation"
   },
   "YCSTS Marquee Banner": {
-    "prefix": "yc-animate-marquee",
+    "prefix": ["animate-marquee", "marquee", "yc-animate-marquee"],
     "body": [
       "<div class=\"overflow-hidden whitespace-nowrap\">",
       "\t<div class=\"inline-block animate-marquee\">",
@@ -125,8 +353,15 @@
     ],
     "description": "Continuous horizontal scrolling marquee banner"
   },
+  "YCSTS Morphing Blob": {
+    "prefix": ["animate-morph", "morph", "yc-animate-morph"],
+    "body": [
+      "<div class=\"animate-morph w-${1:32} h-${1:32} bg-gradient-primary\"></div>"
+    ],
+    "description": "Continuous organic fluid shape morphing"
+  },
   "YCSTS Luxury Custom Select": {
-    "prefix": "yc-custom-select",
+    "prefix": ["custom-select-luxury", "custom-select", "select-luxury", "yc-custom-select"],
     "body": [
       "<div class=\"custom-select\">",
       "\t<button type=\"button\" class=\"custom-select-trigger\">",
@@ -155,51 +390,112 @@
       "\t</div>",
       "</div>"
     ],
-    "description": "YCSTS luxury custom select dropdown with search and checkmark"
+    "description": "YCSTS luxury custom dropdown with search input and checkmark"
   },
   "YCSTS Enhanced Native Select": {
-    "prefix": "yc-select-custom",
+    "prefix": ["select-custom", "form-select", "select-default", "yc-select-custom"],
     "body": [
-      "<select class=\"select-custom\">",
-      "\t<option value=\"${1:val1}\">${2:Option 1}</option>",
-      "\t<option value=\"${3:val2}\">${4:Option 2}</option>",
-      "\t<option value=\"${5:val3}\">${6:Option 3}</option>",
+      "<select class=\"select-custom ${1| ,select-primary,select-dark,select-pill|}\">",
+      "\t<option value=\"${2:val1}\">${3:Option 1}</option>",
+      "\t<option value=\"${4:val2}\">${5:Option 2}</option>",
+      "\t<option value=\"${6:val3}\">${7:Option 3}</option>",
       "</select>"
     ],
-    "description": "YCSTS styled native select element"
+    "description": "YCSTS enhanced native select dropdown with custom SVG chevron"
   },
-  "YCSTS Glowing Scrollbar Container": {
-    "prefix": "yc-scrollbar-glow",
+  "YCSTS Native Select Sizes": {
+    "prefix": ["select-sizes", "select-custom-sizes", "yc-select-sizes"],
     "body": [
-      "<div class=\"scrollbar-glow overflow-y-auto max-h-${1:64} p-${2:4} bg-zinc-900 border border-zinc-800 rounded-xl\">",
+      "<div class=\"space-y-3\">",
+      "\t<select class=\"select-custom select-sm\"><option>${1:Small Select}</option></select>",
+      "\t<select class=\"select-custom\"><option>${2:Default Select}</option></select>",
+      "\t<select class=\"select-custom select-lg\"><option>${3:Large Select}</option></select>",
+      "</div>"
+    ],
+    "description": "YCSTS styled native select in small, default, and large sizes"
+  },
+  "YCSTS Card Default": {
+    "prefix": ["card-default", "card", "yc-card-default", "yc-card"],
+    "body": [
+      "<div class=\"card p-${1:6}\">",
+      "\t<h3 class=\"text-xl font-bold text-zinc-100\">${2:Card Title}</h3>",
+      "\t<p class=\"mt-2 text-zinc-400 text-sm\">${3:Card description and content goes here.}</p>",
       "\t$0",
       "</div>"
     ],
-    "description": "Container with glowing gradient custom scrollbar"
+    "description": "YCSTS standard elevated card"
   },
-  "YCSTS Radiant Text Selection": {
-    "prefix": "yc-selection-glow",
+  "YCSTS Card Glassmorphism": {
+    "prefix": ["card-glass", "glass-card", "yc-card-glass"],
     "body": [
-      "<div class=\"selection-glow\">",
+      "<div class=\"card-glass p-${1:6}\">",
+      "\t<h3 class=\"text-xl font-bold text-zinc-100\">${2:Glass Card}</h3>",
+      "\t<p class=\"mt-2 text-zinc-300 text-sm\">${3:Frosted glass surface with backdrop blur.}</p>",
       "\t$0",
       "</div>"
     ],
-    "description": "Container with glowing radiant text highlight selection"
+    "description": "YCSTS frosted glass card with backdrop blur"
   },
-  "YCSTS Modal Dialog": {
-    "prefix": "yc-modal",
+  "YCSTS Card Header Footer": {
+    "prefix": ["card-header-footer", "card-full", "yc-card-header-footer"],
+    "body": [
+      "<div class=\"card\">",
+      "\t<div class=\"card-header p-4 border-b border-zinc-800 font-semibold text-zinc-100\">",
+      "\t\t${1:Card Header}",
+      "\t</div>",
+      "\t<div class=\"card-body p-6 text-zinc-300\">",
+      "\t\t${2:Main card content text.}",
+      "\t</div>",
+      "\t<div class=\"card-footer p-4 border-t border-zinc-800 flex justify-end gap-2\">",
+      "\t\t<button type=\"button\" class=\"btn btn-secondary btn-sm\">Cancel</button>",
+      "\t\t<button type=\"button\" class=\"btn btn-primary btn-sm\">Save</button>",
+      "\t</div>",
+      "</div>"
+    ],
+    "description": "YCSTS card with separate header, body, and footer"
+  },
+  "YCSTS Card KPI Stat": {
+    "prefix": ["card-stat", "card-kpi", "stat-card", "yc-stat-card"],
+    "body": [
+      "<div class=\"stat-card hover-float\">",
+      "\t<div class=\"stat-title text-sm text-zinc-400\">${1:Total Revenue}</div>",
+      "\t<div class=\"stat-value text-3xl font-bold text-zinc-100 mt-1\">${2:$48,250}</div>",
+      "\t<div class=\"stat-desc stat-trend-up text-xs font-semibold text-emerald-400 mt-2 flex items-center gap-1\">",
+      "\t\t<span>&uarr; ${3:+18.2%}</span>",
+      "\t\t<span class=\"text-zinc-500 font-normal\">vs last month</span>",
+      "\t</div>",
+      "</div>"
+    ],
+    "description": "YCSTS analytics metric stat card with trend indicator"
+  },
+  "YCSTS Card Image": {
+    "prefix": ["card-image", "yc-card-image"],
+    "body": [
+      "<div class=\"card overflow-hidden max-w-sm\">",
+      "\t<img src=\"${1:https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=600}\" alt=\"${2:Cover}\" class=\"w-full h-48 object-cover\">",
+      "\t<div class=\"p-6\">",
+      "\t\t<h3 class=\"text-lg font-bold text-zinc-100\">${3:Card Title}</h3>",
+      "\t\t<p class=\"mt-2 text-zinc-400 text-sm\">${4:Short descriptive text for the card preview.}</p>",
+      "\t\t<button type=\"button\" class=\"btn btn-primary btn-sm mt-4\">${5:Read More}</button>",
+      "\t</div>",
+      "</div>"
+    ],
+    "description": "YCSTS card featuring top hero image and action"
+  },
+  "YCSTS Modal Default": {
+    "prefix": ["modal-default", "modal", "yc-modal-default", "yc-modal"],
     "body": [
       "<div class=\"modal-overlay\" id=\"${1:modal-id}\">",
       "\t<div class=\"modal\">",
       "\t\t<div class=\"modal-header\">",
       "\t\t\t<h3 class=\"text-lg font-semibold text-zinc-100\">${2:Modal Title}</h3>",
-      "\t\t\t<button type=\"button\" class=\"modal-close\">&times;</button>",
+      "\t\t\t<button type=\"button\" class=\"modal-close\" onclick=\"document.getElementById('${1:modal-id}').classList.remove('is-active')\">&times;</button>",
       "\t\t</div>",
       "\t\t<div class=\"modal-body\">",
-      "\t\t\t<p class=\"text-zinc-400\">${3:Modal content text goes here.}</p>",
+      "\t\t\t<p class=\"text-zinc-300\">${3:Modal dialog body text goes here.}</p>",
       "\t\t</div>",
-      "\t\t<div class=\"modal-footer\">",
-      "\t\t\t<button type=\"button\" class=\"btn btn-secondary\">Cancel</button>",
+      "\t\t<div class=\"modal-footer flex justify-end gap-3\">",
+      "\t\t\t<button type=\"button\" class=\"btn btn-secondary\" onclick=\"document.getElementById('${1:modal-id}').classList.remove('is-active')\">Cancel</button>",
       "\t\t\t<button type=\"button\" class=\"btn btn-primary\">Confirm</button>",
       "\t\t</div>",
       "\t</div>",
@@ -207,92 +503,156 @@
     ],
     "description": "YCSTS modal dialog with backdrop and header/body/footer"
   },
-  "YCSTS Standard Card": {
-    "prefix": "yc-card",
+  "YCSTS Modal Confirm": {
+    "prefix": ["modal-confirm", "yc-modal-confirm"],
     "body": [
-      "<div class=\"card p-${1:6}\">",
-      "\t<h3 class=\"text-xl font-bold text-zinc-100\">${2:Card Title}</h3>",
-      "\t<p class=\"mt-2 text-zinc-400 text-sm\">${3:Card description and details.}</p>",
-      "\t$0",
-      "</div>"
-    ],
-    "description": "YCSTS standard elevated card"
-  },
-  "YCSTS Glassmorphism Card": {
-    "prefix": "yc-card-glass",
-    "body": [
-      "<div class=\"card-glass p-${1:6}\">",
-      "\t<h3 class=\"text-xl font-bold text-zinc-100\">${2:Glass Card}</h3>",
-      "\t<p class=\"mt-2 text-zinc-300 text-sm\">${3:Frosted glass card with backdrop blur.}</p>",
-      "\t$0",
-      "</div>"
-    ],
-    "description": "YCSTS frosted glassmorphism card"
-  },
-  "YCSTS KPI Stat Card": {
-    "prefix": "yc-stat-card",
-    "body": [
-      "<div class=\"stat-card\">",
-      "\t<div class=\"stat-label text-sm text-zinc-400\">${1:Total Revenue}</div>",
-      "\t<div class=\"stat-value text-3xl font-bold text-zinc-100 mt-1\">${2:$45,280}</div>",
-      "\t<div class=\"stat-trend text-xs font-semibold text-emerald-400 mt-2 flex items-center gap-1\">",
-      "\t\t<span>&uarr; ${3:+18.2%}</span>",
-      "\t\t<span class=\"text-zinc-500 font-normal\">vs last month</span>",
+      "<div class=\"modal-overlay\" id=\"${1:confirm-modal}\">",
+      "\t<div class=\"modal max-w-sm text-center p-6 space-y-4\">",
+      "\t\t<div class=\"w-12 h-12 rounded-full bg-red-500/10 text-red-500 mx-auto flex items-center justify-center text-xl font-bold\">!</div>",
+      "\t\t<h3 class=\"text-lg font-bold text-zinc-100\">${2:Are you sure?}</h3>",
+      "\t\t<p class=\"text-sm text-zinc-400\">${3:This action cannot be undone.}</p>",
+      "\t\t<div class=\"flex justify-center gap-3 pt-2\">",
+      "\t\t\t<button type=\"button\" class=\"btn btn-secondary\">Cancel</button>",
+      "\t\t\t<button type=\"button\" class=\"btn btn-danger\">Delete</button>",
+      "\t\t</div>",
       "\t</div>",
       "</div>"
     ],
-    "description": "YCSTS analytics KPI stat card with trend indicator"
+    "description": "YCSTS centered confirmation alert dialog"
   },
-  "YCSTS Primary Button": {
-    "prefix": "yc-btn-primary",
+  "YCSTS Modal Glassmorphism": {
+    "prefix": ["modal-glass", "yc-modal-glass"],
     "body": [
-      "<button class=\"btn btn-primary\">${1:Button Text}</button>"
+      "<div class=\"modal-overlay\" id=\"${1:glass-modal}\">",
+      "\t<div class=\"modal modal-glass max-w-lg p-6 space-y-4\">",
+      "\t\t<div class=\"flex justify-between items-center\">",
+      "\t\t\t<h3 class=\"text-xl font-bold text-zinc-100\">${2:Glass Modal}</h3>",
+      "\t\t\t<button type=\"button\" class=\"modal-close\">&times;</button>",
+      "\t\t</div>",
+      "\t\t<p class=\"text-zinc-300 text-sm\">${3:Frosted glass modal with backdrop blur.}</p>",
+      "\t\t<div class=\"flex justify-end gap-3 pt-4\">",
+      "\t\t\t<button type=\"button\" class=\"btn btn-secondary btn-sm\">Close</button>",
+      "\t\t\t<button type=\"button\" class=\"btn btn-gradient btn-sm\">Proceed</button>",
+      "\t\t</div>",
+      "\t</div>",
+      "</div>"
     ],
-    "description": "YCSTS primary button"
+    "description": "YCSTS frosted glass modal dialog"
   },
-  "YCSTS Gradient Button": {
-    "prefix": "yc-btn-gradient",
+  "YCSTS Modal Sizes": {
+    "prefix": ["modal-sizes", "modal-sm", "modal-lg", "yc-modal-sizes"],
     "body": [
-      "<button class=\"btn btn-gradient\">${1:Gradient Action}</button>"
+      "<div class=\"modal-overlay\" id=\"${1:modal-id}\">",
+      "\t<div class=\"modal ${2|max-w-sm,max-w-md,max-w-xl,max-w-3xl,max-w-5xl|} p-6\">",
+      "\t\t<div class=\"modal-header\">",
+      "\t\t\t<h3 class=\"text-lg font-bold text-zinc-100\">${3:Modal Title}</h3>",
+      "\t\t\t<button type=\"button\" class=\"modal-close\">&times;</button>",
+      "\t\t</div>",
+      "\t\t<div class=\"modal-body py-4\">",
+      "\t\t\t<p class=\"text-zinc-300\">${4:Sized modal dialog content.}</p>",
+      "\t\t</div>",
+      "\t\t<div class=\"modal-footer flex justify-end gap-2\">",
+      "\t\t\t<button type=\"button\" class=\"btn btn-secondary\">Cancel</button>",
+      "\t\t\t<button type=\"button\" class=\"btn btn-primary\">Save</button>",
+      "\t\t</div>",
+      "\t</div>",
+      "</div>"
     ],
-    "description": "YCSTS radiant gradient button"
+    "description": "YCSTS modal with configurable size width"
   },
-  "YCSTS Glowing Button": {
-    "prefix": "yc-btn-glow",
+  "YCSTS Form Input": {
+    "prefix": ["form-input", "input-default", "yc-form-input", "yc-input"],
     "body": [
-      "<button class=\"btn btn-glow\">${1:Glowing Action}</button>"
+      "<input type=\"${1|text,email,password,number,url,tel|}\" class=\"input w-full\" placeholder=\"${2:Enter value...}\">"
     ],
-    "description": "YCSTS glowing neon aura button"
+    "description": "YCSTS styled text input field"
   },
-  "YCSTS Soft Button": {
-    "prefix": "yc-btn-soft",
+  "YCSTS Form Input Floating": {
+    "prefix": ["form-input-floating", "input-floating", "yc-input-floating"],
     "body": [
-      "<button class=\"btn btn-soft\">${1:Soft Action}</button>"
+      "<div class=\"relative\">",
+      "\t<input type=\"${1|text,email,password|}\" id=\"${2:inputId}\" placeholder=\" \" class=\"input pt-6 pb-2 text-sm peer w-full\">",
+      "\t<label for=\"${2:inputId}\" class=\"absolute text-xs text-zinc-500 duration-150 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-blue-500\">",
+      "\t\t${3:Floating Label}",
+      "\t</label>",
+      "</div>"
     ],
-    "description": "YCSTS subtle modern soft button"
+    "description": "YCSTS floating label animated input field"
   },
-  "YCSTS Toggle Switch": {
-    "prefix": "yc-toggle",
+  "YCSTS Form Textarea": {
+    "prefix": ["form-textarea", "textarea", "yc-form-textarea"],
+    "body": [
+      "<textarea class=\"input w-full\" rows=\"${1:4}\" placeholder=\"${2:Enter your message...}\"></textarea>"
+    ],
+    "description": "YCSTS styled multiline textarea"
+  },
+  "YCSTS Form Toggle Switch": {
+    "prefix": ["form-toggle", "toggle", "switch", "yc-toggle"],
     "body": [
       "<label class=\"flex items-center gap-3 cursor-pointer\">",
-      "\t<input type=\"checkbox\" class=\"toggle\">",
-      "\t<span class=\"text-sm text-zinc-300 font-medium\">${1:Enable notification}</span>",
+      "\t<input type=\"checkbox\" class=\"toggle\" ${1:checked}>",
+      "\t<span class=\"text-sm text-zinc-300 font-medium\">${2:Enable feature}</span>",
       "</label>"
     ],
     "description": "YCSTS custom toggle switch"
   },
-  "YCSTS Live Status Badge": {
-    "prefix": "yc-badge-status",
+  "YCSTS Form Group": {
+    "prefix": ["form-group", "field", "yc-form-group"],
+    "body": [
+      "<div class=\"space-y-1.5\">",
+      "\t<label class=\"block text-xs font-semibold text-zinc-300 uppercase tracking-wider\">${1:Label Title}</label>",
+      "\t<input type=\"${2:text}\" class=\"input w-full\" placeholder=\"${3:Placeholder...}\">",
+      "\t<span class=\"block text-xs text-zinc-500\">${4:Helper text caption.}</span>",
+      "</div>"
+    ],
+    "description": "YCSTS form group with label, input, and helper text"
+  },
+  "YCSTS Scrollbar Glow": {
+    "prefix": ["scrollbar-glow", "scroll-glow", "yc-scrollbar-glow"],
+    "body": [
+      "<div class=\"scrollbar-glow overflow-y-auto max-h-${1:64} p-${2:4} bg-zinc-900 border border-zinc-800 rounded-xl\">",
+      "\t$0",
+      "</div>"
+    ],
+    "description": "YCSTS glowing gradient custom scrollbar container"
+  },
+  "YCSTS Scrollbar Custom": {
+    "prefix": ["scrollbar-custom", "scroll-custom", "yc-scrollbar-custom"],
+    "body": [
+      "<div class=\"scrollbar-custom overflow-y-auto max-h-${1:64} p-${2:4}\">",
+      "\t$0",
+      "</div>"
+    ],
+    "description": "YCSTS clean slate scrollbar container"
+  },
+  "YCSTS Selection Glow": {
+    "prefix": ["selection-glow", "yc-selection-glow"],
+    "body": [
+      "<div class=\"selection-glow\">",
+      "\t$0",
+      "</div>"
+    ],
+    "description": "YCSTS radiant neon text selection highlight"
+  },
+  "YCSTS Badge Default": {
+    "prefix": ["badge-default", "badge", "yc-badge-default", "yc-badge"],
+    "body": [
+      "<span class=\"badge ${1|badge-primary,badge-secondary,badge-success,badge-warning,badge-danger,badge-info|}\">${2:Badge}</span>"
+    ],
+    "description": "YCSTS status pill badge"
+  },
+  "YCSTS Badge Status Live": {
+    "prefix": ["badge-status-live", "badge-status", "yc-badge-status"],
     "body": [
       "<span class=\"badge badge-success flex items-center gap-1.5\">",
       "\t<span class=\"w-2 h-2 rounded-full bg-emerald-400 animate-ping\"></span>",
       "\t<span>${1:Operational}</span>",
       "</span>"
     ],
-    "description": "YCSTS live status badge with pulsing dot"
+    "description": "YCSTS status badge with active pulsing beacon"
   },
-  "YCSTS Alert Banner": {
-    "prefix": "yc-alert",
+  "YCSTS Alert Default": {
+    "prefix": ["alert-default", "alert", "yc-alert-default", "yc-alert"],
     "body": [
       "<div class=\"alert alert-${1|primary,success,warning,danger,info|}\">",
       "\t<div class=\"alert-icon\">",
@@ -300,70 +660,175 @@
       "\t</div>",
       "\t<div class=\"alert-content\">",
       "\t\t<div class=\"alert-title font-semibold\">${2:Notice}</div>",
-      "\t\t<div class=\"alert-message text-sm\">${3:Your changes have been saved successfully.}</div>",
+      "\t\t<div class=\"alert-message text-sm\">${3:Your operation completed successfully.}</div>",
       "\t</div>",
       "</div>"
     ],
-    "description": "YCSTS alert banner component"
+    "description": "YCSTS alert notice banner"
   },
-  "YCSTS Toast Notification": {
-    "prefix": "yc-toast",
+  "YCSTS Alert Dismissible": {
+    "prefix": ["alert-dismissible", "yc-alert-dismissible"],
+    "body": [
+      "<div class=\"alert alert-${1:primary} flex items-center justify-between\">",
+      "\t<div class=\"flex items-center gap-3\">",
+      "\t\t<span>${2:Heads up! A new software update is available.}</span>",
+      "\t</div>",
+      "\t<button type=\"button\" class=\"text-zinc-400 hover:text-zinc-100 text-lg\">&times;</button>",
+      "</div>"
+    ],
+    "description": "YCSTS dismissible alert notification"
+  },
+  "YCSTS Toast Card": {
+    "prefix": ["toast-card", "toast", "yc-toast"],
     "body": [
       "<div class=\"toast toast-top-right\">",
-      "\t<div class=\"toast-card card p-4 shadow-xl border border-zinc-800 flex items-center gap-3\">",
+      "\t<div class=\"toast-card card p-4 shadow-2xl border border-zinc-800 flex items-center gap-3\">",
       "\t\t<span class=\"w-2.5 h-2.5 rounded-full bg-blue-500\"></span>",
-      "\t\t<span class=\"text-sm text-zinc-200\">${1:System updated to version 1.4.0}</span>",
+      "\t\t<span class=\"text-sm text-zinc-200\">${1:Action completed successfully}</span>",
       "\t</div>",
       "</div>"
     ],
-    "description": "YCSTS toast notification container"
+    "description": "YCSTS floating feedback notification toast"
   },
-  "YCSTS Accordion": {
-    "prefix": "yc-accordion",
+  "YCSTS Navbar Default": {
+    "prefix": ["navbar-default", "navbar", "nav", "yc-navbar"],
     "body": [
-      "<details class=\"accordion-item card p-4\">",
+      "<nav class=\"flex items-center justify-between px-6 py-4 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-50\">",
+      "\t<div class=\"flex items-center gap-6\">",
+      "\t\t<a href=\"#\" class=\"text-xl font-bold text-zinc-100\">${1:Logo}</a>",
+      "\t\t<div class=\"hidden md:flex items-center gap-4 text-sm text-zinc-400\">",
+      "\t\t\t<a href=\"#\" class=\"text-zinc-100 font-medium\">Dashboard</a>",
+      "\t\t\t<a href=\"#\" class=\"hover:text-zinc-100\">Features</a>",
+      "\t\t\t<a href=\"#\" class=\"hover:text-zinc-100\">Docs</a>",
+      "\t\t</div>",
+      "\t</div>",
+      "\t<div class=\"flex items-center gap-3\">",
+      "\t\t<button type=\"button\" class=\"btn btn-primary btn-sm\">${2:Sign In}</button>",
+      "\t</div>",
+      "</nav>"
+    ],
+    "description": "YCSTS responsive header navbar"
+  },
+  "YCSTS Accordion Default": {
+    "prefix": ["accordion-default", "accordion", "yc-accordion"],
+    "body": [
+      "<details class=\"accordion-item card p-4\" ${1:open}>",
       "\t<summary class=\"cursor-pointer font-semibold text-zinc-200 flex justify-between items-center\">",
-      "\t\t<span>${1:Accordion Header}</span>",
+      "\t\t<span>${2:Accordion Header Title}</span>",
       "\t\t<span class=\"accordion-arrow\">&darr;</span>",
       "\t</summary>",
       "\t<div class=\"accordion-content mt-3 text-sm text-zinc-400\">",
-      "\t\t${2:Expanded content information goes here.}",
+      "\t\t${3:Expanded detailed content information goes here.}",
       "\t</div>",
       "</details>"
     ],
-    "description": "YCSTS pure CSS accordion details element"
+    "description": "YCSTS pure CSS disclosure accordion details element"
   },
-  "YCSTS Floating Label Input": {
-    "prefix": "yc-input-floating",
+  "YCSTS Tabs Default": {
+    "prefix": ["tabs-default", "tabs", "yc-tabs"],
     "body": [
-      "<div class=\"relative\">",
-      "\t<input type=\"${1:text}\" id=\"${2:input-id}\" placeholder=\" \" class=\"input pt-6 pb-2 text-sm peer w-full\">",
-      "\t<label for=\"${2:input-id}\" class=\"absolute text-xs text-zinc-500 duration-150 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 peer-focus:text-blue-500\">",
-      "\t\t${3:Label Text}",
-      "\t</label>",
+      "<div class=\"flex items-center gap-2 border-b border-zinc-800 pb-2 text-sm font-medium\">",
+      "\t<button type=\"button\" class=\"px-4 py-2 rounded-lg bg-blue-600/10 text-blue-400 font-semibold\">${1:Tab One}</button>",
+      "\t<button type=\"button\" class=\"px-4 py-2 rounded-lg text-zinc-400 hover:text-zinc-100\">${2:Tab Two}</button>",
+      "\t<button type=\"button\" class=\"px-4 py-2 rounded-lg text-zinc-400 hover:text-zinc-100\">${3:Tab Three}</button>",
       "</div>"
     ],
-    "description": "YCSTS modern floating label input group"
+    "description": "YCSTS navigation tabs bar"
   },
-  "YCSTS Chat Bubble": {
-    "prefix": "yc-chat-bubble",
+  "YCSTS Table Modern": {
+    "prefix": ["table-modern", "table", "yc-table"],
     "body": [
-      "<div class=\"chat-bubble ${1|chat-bubble-start,chat-bubble-end|}\">",
-      "\t<p class=\"text-sm\">${2:Message text goes here.}</p>",
-      "\t<span class=\"text-[10px] text-zinc-400 block mt-1\">${3:12:45 PM}</span>",
+      "<div class=\"overflow-x-auto card p-0 border border-zinc-800 rounded-xl\">",
+      "\t<table class=\"w-full text-left text-sm text-zinc-300\">",
+      "\t\t<thead class=\"bg-zinc-900/80 border-b border-zinc-800 text-xs font-semibold uppercase text-zinc-400\">",
+      "\t\t\t<tr>",
+      "\t\t\t\t<th class=\"px-6 py-3.5\">${1:Name}</th>",
+      "\t\t\t\t<th class=\"px-6 py-3.5\">${2:Status}</th>",
+      "\t\t\t\t<th class=\"px-6 py-3.5\">${3:Role}</th>",
+      "\t\t\t\t<th class=\"px-6 py-3.5 text-right\">${4:Action}</th>",
+      "\t\t\t</tr>",
+      "\t\t</thead>",
+      "\t\t<tbody class=\"divide-y divide-zinc-800/60\">",
+      "\t\t\t<tr class=\"hover:bg-zinc-900/40 transition\">",
+      "\t\t\t\t<td class=\"px-6 py-4 font-medium text-zinc-100\">${5:Alice Morgan}</td>",
+      "\t\t\t\t<td class=\"px-6 py-4\"><span class=\"badge badge-success\">Active</span></td>",
+      "\t\t\t\t<td class=\"px-6 py-4 text-zinc-400\">${6:Developer}</td>",
+      "\t\t\t\t<td class=\"px-6 py-4 text-right\"><button type=\"button\" class=\"btn btn-secondary btn-sm\">Edit</button></td>",
+      "\t\t\t</tr>",
+      "\t\t</tbody>",
+      "\t</table>",
       "</div>"
     ],
-    "description": "YCSTS chat messaging speech bubble"
+    "description": "YCSTS clean modern data table"
   },
-  "YCSTS Laravel Blade Vite Directive": {
-    "prefix": "yc-laravel-vite",
+  "YCSTS Chat Bubble Start (Incoming)": {
+    "prefix": ["chat-bubble-start", "chat-start", "yc-chat-start"],
+    "body": [
+      "<div class=\"chat-bubble chat-bubble-start max-w-sm\">",
+      "\t<p class=\"text-sm\">${1:Incoming message text goes here.}</p>",
+      "\t<span class=\"text-[10px] text-zinc-400 block mt-1\">${2:12:45 PM}</span>",
+      "</div>"
+    ],
+    "description": "YCSTS incoming chat speech bubble"
+  },
+  "YCSTS Chat Bubble End (Outgoing)": {
+    "prefix": ["chat-bubble-end", "chat-end", "yc-chat-end"],
+    "body": [
+      "<div class=\"chat-bubble chat-bubble-end max-w-sm ml-auto\">",
+      "\t<p class=\"text-sm\">${1:Outgoing response message text.}</p>",
+      "\t<span class=\"text-[10px] text-blue-200 block mt-1 text-right\">${2:12:46 PM}</span>",
+      "</div>"
+    ],
+    "description": "YCSTS outgoing chat speech bubble"
+  },
+  "YCSTS Grid 3 Columns": {
+    "prefix": ["grid-cols-3", "grid-3", "yc-grid-3"],
+    "body": [
+      "<div class=\"grid grid-cols-1 md:grid-cols-3 gap-${1:6}\">",
+      "\t<div>${2:Column 1}</div>",
+      "\t<div>${3:Column 2}</div>",
+      "\t<div>${4:Column 3}</div>",
+      "</div>"
+    ],
+    "description": "YCSTS responsive 3-column grid layout"
+  },
+  "YCSTS Grid 2 Columns": {
+    "prefix": ["grid-cols-2", "grid-2", "yc-grid-2"],
+    "body": [
+      "<div class=\"grid grid-cols-1 md:grid-cols-2 gap-${1:6}\">",
+      "\t<div>${2:Column 1}</div>",
+      "\t<div>${3:Column 2}</div>",
+      "</div>"
+    ],
+    "description": "YCSTS responsive 2-column grid layout"
+  },
+  "YCSTS Flex Center": {
+    "prefix": ["flex-center", "yc-flex-center"],
+    "body": [
+      "<div class=\"flex items-center justify-center\">",
+      "\t$0",
+      "</div>"
+    ],
+    "description": "YCSTS flexbox centered container"
+  },
+  "YCSTS Flex Between": {
+    "prefix": ["flex-between", "yc-flex-between"],
+    "body": [
+      "<div class=\"flex items-center justify-between\">",
+      "\t$0",
+      "</div>"
+    ],
+    "description": "YCSTS flexbox space-between container"
+  },
+  "YCSTS Laravel Blade Directive": {
+    "prefix": ["laravel-vite", "blade-vite", "yc-laravel-vite"],
     "body": [
       "@vite(['resources/css/app.css', 'resources/js/app.js'])"
     ],
     "description": "Laravel Vite directive linking YCSTS and JS assets"
   },
   "YCSTS Laravel Blade Starter": {
-    "prefix": "yc-blade-starter",
+    "prefix": ["laravel-starter", "blade-starter", "yc-blade-starter"],
     "body": [
       "<!DOCTYPE html>",
       "<html lang=\"{{ str_replace('_', '-', app()->getLocale()) }}\">",
@@ -379,8 +844,8 @@
       "\t\t\t<h1 class=\"text-4xl font-extrabold text-gradient-primary\">${2:Built with YCSTS}</h1>",
       "\t\t\t<p class=\"mt-3 text-zinc-400\">${3:Single-word entrance animations and luxury components in Laravel.}</p>",
       "\t\t\t<div class=\"mt-6 flex justify-center gap-3\">",
-      "\t\t\t\t<button class=\"btn btn-primary\">${4:Primary Action}</button>",
-      "\t\t\t\t<button class=\"btn btn-secondary\">${5:Secondary Action}</button>",
+      "\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">${4:Primary Action}</button>",
+      "\t\t\t\t<button type=\"button\" class=\"btn btn-secondary\">${5:Secondary Action}</button>",
       "\t\t\t</div>",
       "\t\t</header>",
       "\t\t$0",
@@ -391,14 +856,14 @@
     "description": "Complete Laravel Blade starter layout with YCSTS and Vite"
   },
   "YCSTS CSS Import in app.css": {
-    "prefix": "yc-import",
+    "prefix": ["import-ycsts", "import-css", "yc-import"],
     "body": [
       "@import \"ycsts-framework/dist/ycsts.min.css\";"
     ],
     "description": "Import YCSTS minified CSS into CSS stylesheet"
   },
   "YCSTS Bundler Import": {
-    "prefix": "yc-import-bundler",
+    "prefix": ["import-ycsts-bundler", "import-bundler", "yc-import-bundler"],
     "body": [
       "@import \"ycsts-framework\";"
     ],

@@ -347,36 +347,43 @@ All classes, animations, and components are live-reloaded as you edit.
 
 ## Visual Studio Code Extension
 
-YCSTS includes an official VS Code snippet extension providing rapid autocomplete for all utilities, animations, and components across HTML, Blade, PHP, Vue, React, and CSS.
+YCSTS includes an official Quick Snippets extension (`yanzyuyu.ycsts-snippets`) providing instant autocomplete for all framework elements, animations, and components.
+
+### Autocomplete Anywhere
+
+Type a prefix followed by a hyphen (`-`) in HTML, Blade, Vue, PHP, or React to trigger an interactive suggestions dropdown:
+
+- **Buttons**: Type `button-` or `btn-` to list all 25 button variations (`button-a`, `button-block`, `button-default`, `button-gradient`, `button-glow`, `button-loading`, `button-sizes`, `button-toggle`, etc.).
+- **Animations**: Type `fadein-` or `animate-` for 20+ entrance and continuous animations (`fadein-up`, `fadein-scale`, `animate-float`, etc.).
+- **Selects**: Type `select-` or `custom-select-` for luxury dropdowns with search filter or enhanced native selects.
+- **Cards & Modals**: Type `card-` or `modal-` for elevated cards, glassmorphic panels, and dialogs.
+- **Forms**: Type `form-` or `input-` for text inputs, floating labels, toggle switches, and grouped fields.
 
 ### Installation
 
-Install via the VS Code CLI:
-
 ```bash
-code --install-extension vscode-extension/ycsts-snippets-1.0.0.vsix
+code --install-extension vscode-extension/ycsts-snippets-1.1.0.vsix
 ```
 
-Or install from the Extensions panel: `Ctrl+Shift+P` -> `Extensions: Install from VSIX...` -> select `vscode-extension/ycsts-snippets-1.0.0.vsix`.
-
-### Popular Snippets
+### Popular Snippet Triggers
 
 | Prefix | Output | Description |
 |---|---|---|
-| `yc-fadein` | `<div class="fadein">...</div>` | 0.4s smooth fade + slide up |
-| `yc-fadein-up` | `<div class="fadein-up">...</div>` | Upward entrance |
-| `yc-fadein-scale` | `<div class="fadein-scale">...</div>` | Zoom/scale entrance |
-| `yc-custom-select` | Luxury custom dropdown | Select with search, badges, checkmarks |
-| `yc-select-custom` | `<select class="select-custom">...` | Enhanced native select |
-| `yc-scrollbar-glow` | `<div class="scrollbar-glow">...</div>` | Glowing gradient scrollbar |
-| `yc-modal` | Complete modal dialog | Modal with backdrop, header, body, footer |
-| `yc-stat-card` | KPI analytics metric card | Metric card with percentage trend indicator |
-| `yc-btn-primary` | `<button class="btn btn-primary">...` | Primary styled button |
-| `yc-btn-gradient` | `<button class="btn btn-gradient">...` | Radiant gradient button |
-| `yc-toggle` | `<input type="checkbox" class="toggle">` | Accessible switch toggle |
-| `yc-laravel-vite` | `@vite(['resources/css/app.css', ...])` | Laravel asset directive |
-| `yc-blade-starter` | Full starter Blade layout | Ready-to-use template with Vite & YCSTS |
-| `yc-import` | `@import "ycsts-framework/dist/ycsts.min.css";` | CSS stylesheet import |
+| `button-` / `btn-` | Interactive button picker | 25 button variants with style/size dropdowns |
+| `button-gradient` | `<button class="btn btn-gradient">` | Radiant dual-tone gradient button |
+| `button-glow` | `<button class="btn btn-glow">` | Glowing neon aura button |
+| `button-sizes` | `btn-sm`, default, `btn-lg` | Button size showcase |
+| `fadein-` | Entrance animation list | `fadein-up`, `fadein-scale`, `fadein-blur`, etc. |
+| `animate-float` | `<div class="animate-float">` | Continuous ambient floating loop |
+| `custom-select-luxury` | Luxury select studio | Custom dropdown with search & checkmark |
+| `select-custom` | `<select class="select-custom">` | Enhanced native select with custom chevron |
+| `scrollbar-glow` | `<div class="scrollbar-glow">` | Gradient glowing scrollbar container |
+| `modal-default` | Complete modal dialog | Modal with backdrop, header, body, footer |
+| `card-glass` | `<div class="card-glass">` | Frosted glassmorphism card |
+| `card-stat` | KPI metric card | Metric card with percentage trend indicator |
+| `form-toggle` | `<input type="checkbox" class="toggle">` | Accessible switch toggle |
+| `laravel-vite` | `@vite(['resources/css/app.css', ...])` | Laravel asset directive |
+| `laravel-starter` | Full starter Blade layout | Ready-to-use template with Vite & YCSTS |
 
 ---
 

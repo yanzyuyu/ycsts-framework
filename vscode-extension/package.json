@@ -1,8 +1,8 @@
 {
   "name": "ycsts-snippets",
   "displayName": "YCSTS Framework Snippets",
-  "description": "Complete code snippets for YCSTS CSS Framework. Single-word animations, luxury components, and utilities.",
-  "version": "1.0.0",
+  "description": "Exhaustive Quick Snippets for YCSTS CSS Framework. Single-word animations, luxury components, and utilities.",
+  "version": "1.1.0",
   "publisher": "yanzyuyu",
   "engines": {
     "vscode": "^1.70.0"
@@ -15,6 +15,7 @@
     "css",
     "fadein",
     "tailwind",
+    "bootstrap",
     "snippets",
     "blade",
     "laravel"
@@ -42,7 +43,19 @@
         "path": "./snippets/snippets.json"
       },
       {
+        "language": "vue-html",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
         "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
         "path": "./snippets/snippets.json"
       },
       {
@@ -54,7 +67,39 @@
         "path": "./snippets/snippets.json"
       },
       {
+        "language": "django-html",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "jinja-html",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "erb",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "ejs",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "handlebars",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/snippets.json"
+      },
+      {
         "language": "css",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "scss",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "sass",
         "path": "./snippets/snippets.json"
       }
     ]
